@@ -2,7 +2,8 @@
   <div id="app">
     <Header />
     <Hero />
-    <!-- <Demo /> -->
+    <Demo />
+    <Video />
     <About />
     <Ctoa />
     <Footer />
@@ -12,7 +13,8 @@
 <script>
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
-// import Demo from './components/Demo.vue'
+import Demo from './components/Demo.vue'
+import Video from './components/Video.vue'
 import About from './components/About.vue'
 import Ctoa from './components/Ctoa.vue'
 import Footer from './components/Footer.vue'
@@ -22,7 +24,8 @@ export default {
   components: {
     Header,
     Hero,
-    // Demo,
+    Demo,
+    Video,
     About,
     Ctoa,
     Footer,

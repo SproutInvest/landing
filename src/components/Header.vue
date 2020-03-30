@@ -35,13 +35,19 @@
               <a
                 href="/"
                 class="ss-header-link nav-link m-2 menu-item nav-active"
-              >Home</a>
+              >Who are we?</a>
             </li>
             <li class="nav-item">
               <a
                 href="#about"
                 class="ss-header-link nav-link m-2 menu-item"
-              >Features</a>
+              >How does it work?</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#footer"
+                class="ss-header-link nav-link m-2 menu-item"
+              >Start investing</a>
             </li>
             <li class="nav-item">
               <a
@@ -66,11 +72,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 .ss-header
-  background-color: $ss-bg-color
+  background-color: $ss-bg-color-white
 .ss-header-link
   color: $ss-font-color-black
   font-weight: 700
   transition: color 0.4s ease 0s
   &:hover
-    color: $ss-font-color-white
+    color: $ss-font-color-sprout
 </style>

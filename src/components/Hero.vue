@@ -18,9 +18,9 @@
           data-aos-delay="500"
         >
           <img
-            class="ss-hero-app-image"
-            src="../assets/app.png"
-            alt="Image"
+            class="ss-hero-image"
+            src="../assets/hero.png"
+            alt="Sprout Hero Image"
           >
         </div>
       </div>
@@ -43,9 +43,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 h1
-  font-size: 3.25rem
+  font-size: 2.25rem
 .ss-hero
   background-color: $ss-bg-color
-.ss-hero-app-image
-  width: 60%
+.ss-hero-image
+  width: 75%
+  margin: 0 auto
 </style>
