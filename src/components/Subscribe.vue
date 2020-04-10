@@ -1,28 +1,52 @@
 <template>
-  <div class="ss-input-group input-group mb-1">
-    <input
-      v-show="!submitted"
-      v-model="email"
-      type="email"
-      class="form-control px-3"
-      placeholder="your@mail.com"
-      aria-label="Subscribe"
-    >
+  <div>
     <div
       v-show="!submitted"
-      class="input-group-append"
+      class="ss-input-group input-group mb-1"
     >
-      <button
-        class="btn"
-        type="submit"
-        @click="subscribeEmail"
+      <input
+        v-model="name"
+        type="text"
+        class="form-control px-3"
+        placeholder="Full Name"
+        aria-label="Name"
       >
-        <span v-show="!submitting">Subscribe</span>
-        <font-awesome-icon
-          v-show="submitting"
-          icon="spinner"
-        />
-      </button>
+      <div class="input-group-append">
+        <input
+          v-model="age"
+          type="number"
+          class="form-control px-3"
+          placeholder="Age"
+          aria-label="Age"
+        >
+      </div>
+    </div>
+    <div
+      v-show="!submitted"
+      class="ss-input-group input-group mb-1"
+    >
+      <input
+        v-model="email"
+        type="email"
+        class="form-control px-3"
+        placeholder="your@mail.com"
+        aria-label="Subscribe"
+      >
+      <div
+        class="input-group-append"
+      >
+        <button
+          class="btn"
+          type="submit"
+          @click="subscribeEmail"
+        >
+          <span v-show="!submitting">Subscribe</span>
+          <font-awesome-icon
+            v-show="submitting"
+            icon="spinner"
+          />
+        </button>
+      </div>
     </div>
     <div
       v-show="submitted"
@@ -42,6 +66,8 @@ export default {
   data: function() {
     return {
       email: null,
+      name: null,
+      age: null,
       submitted: false,
       submitting: false,
     }
@@ -55,7 +81,7 @@ export default {
       this.submitting = true
       axios
         .post(url, {
-          email: this.email,
+          email: `${ this.email } - ${ this.name } - ${ this.age }`,
         })
         .then(() => {
           this.submitting = false
@@ -84,7 +110,7 @@ export default {
     position: relative
     flex: 1 1 auto
     width: 1%
-    margin-bottom: 0
+    margin-bottom: 0.2rem
     display: block
     height: calc(3.375rem + 2px)
     padding: 0.9375rem 0.9375rem
@@ -100,6 +126,7 @@ export default {
   .input-group-append
     margin-left: -1px
     display: flex
+    margin-bottom: 0.2rem
     .btn
       color: $ss-font-color-black
       background-color: #ffffff
@@ -109,6 +136,12 @@ export default {
       border-top-right-radius: 0.25rem !important
       border-bottom-right-radius: 0.25rem !important
       min-width: 10rem
+    input
+      width: 10rem
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      border-top-right-radius: 0.25rem !important
+      border-bottom-right-radius: 0.25rem !important
 .ss-submitted-text
   border-top-right-radius: 0.25rem
   border-bottom-right-radius: 0.25rem

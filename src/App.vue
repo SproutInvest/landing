@@ -5,6 +5,7 @@
     <Demo />
     <Video />
     <About />
+    <Buy />
     <Ctoa />
     <Footer />
   </div>
@@ -16,6 +17,7 @@ import Hero from './components/Hero.vue'
 import Demo from './components/Demo.vue'
 import Video from './components/Video.vue'
 import About from './components/About.vue'
+import Buy from './components/Buy.vue'
 import Ctoa from './components/Ctoa.vue'
 import Footer from './components/Footer.vue'
 
@@ -27,6 +29,7 @@ export default {
     Demo,
     Video,
     About,
+    Buy,
     Ctoa,
     Footer,
   },

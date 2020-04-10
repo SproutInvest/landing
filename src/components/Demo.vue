@@ -17,25 +17,29 @@
         <div class="col-12 col-lg-3 text-center text-lg-left">
           <div class="ss-demo-slider-section">
             <label>Initial Investment Amount</label>
-            <label>USD {{ initialAmount }}</label>
+            <br>
+            <label>{{ formatCurrency(initialAmount) }}</label>
             <b-form-input
               id="initialAmountRange"
               v-model="initialAmount"
+              class="ss-demo-range"
               type="range"
               min="100"
-              max="100000"
+              max="30000"
               step="100"
               @change="updateChart"
             />
             <br><br>
             <label>Monthly Deposit Amount</label>
-            <label>USD {{ monthlyDeposit }}</label>
+            <br>
+            <label>{{ formatCurrency(monthlyDeposit) }}</label>
             <b-form-input
               id="monthlyDepositRange"
               v-model="monthlyDeposit"
+              class="ss-demo-range"
               type="range"
               min="100"
-              max="10000"
+              max="3000"
               step="100"
               @change="updateChart"
             />
@@ -50,7 +54,6 @@
 import VueApexCharts from 'vue-apexcharts'
 
 const BANK_RATE = 0.02
-const TRADITIONAL_RATE = 0.06
 const SPROUT_RATE = 0.09
 
 function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate) {
@@ -65,9 +68,23 @@ function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate) {
   return series
 }
 
+function getSeries(amount, deposit) {
+  return [
+    {
+      name: 'Savings Bank',
+      data: generateSeries(amount, deposit, BANK_RATE),
+    },
+    {
+      name: 'Sprout Investment',
+      data: generateSeries(amount, deposit, SPROUT_RATE),
+    },
+  ]
+}
+
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'MXN',
+  maximumSignificantDigits: 3,
 })
 
 export default {
@@ -80,29 +97,16 @@ export default {
     return {
       initialAmount: 10000,
       monthlyDeposit: 1000,
-      series: [
-        {
-          name: 'Bank',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, BANK_RATE),
-        },
-        {
-          name: 'Traditional Investment',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, TRADITIONAL_RATE),
-        },
-        {
-          name: 'Sprout Investment',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, SPROUT_RATE),
-        },
-      ],
+      series: getSeries(this.initialAmount, this.monthlyDeposit),
       chartOptions: {
         chart: {
           type: 'area',
           height: 1000,
-          stacked: true,
+          stacked: false,
           events: {
           },
         },
-        colors: ['#EFF0F3', '#D3D9DF', '#40c7c0'],
+        colors: ['#EFF0F3', '#40c7c0'],
         dataLabels: {
           enabled: false,
         },
@@ -142,20 +146,10 @@ export default {
   },
   methods: {
     updateChart: function () {
-      this.series = [
-        {
-          name: 'Bank',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, BANK_RATE),
-        },
-        {
-          name: 'Traditional Investment',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, TRADITIONAL_RATE),
-        },
-        {
-          name: 'Sprout Investment',
-          data: generateSeries(this.initialAmount, this.monthlyDeposit, SPROUT_RATE),
-        },
-      ]
+      this.series = getSeries(this.initialAmount, this.monthlyDeposit)
+    },
+    formatCurrency: function (value) {
+      return formatter.format(value)
     },
   },
 }
@@ -178,4 +172,10 @@ export default {
     background-color: $ss-font-color-sprout
   &::-ms-thumb
     background-color: $ss-font-color-sprout
+.ss-demo-range::-webkit-slider-thumb
+  background: $ss-font-color-sprout
+.ss-demo-range::-moz-range-thumb
+  background: $ss-font-color-sprout
+.ss-demo-range::-ms-thumb
+  background: $ss-font-color-sprout
 </style>
