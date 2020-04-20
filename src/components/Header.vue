@@ -55,6 +55,12 @@
                 class="ss-header-link nav-link m-2 menu-item"
               >Contact</a>
             </li>
+            <li class="nav-item">
+              <a
+                href=""
+                class="ss-header-link nav-link m-2 menu-item"
+              ><LanguageSwitcher /></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -63,8 +69,13 @@
 </template>
 
 <script>
+import LanguageSwitcher from './LanguageSwitcher'
+
 export default {
   name: 'Header',
+  components: {
+    LanguageSwitcher,
+  },
   props: {},
 }
 </script>

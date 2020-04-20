@@ -7,10 +7,10 @@
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
           <h1 class="mb-5">
-            Learn about your money and watch it grow
+            {{ $t('header') }}
           </h1>
           <Subscribe />
-          <small>* we won't share your data with third parties</small>
+          <small>{{ $t('disclaimer') }}</small>
         </div>
         <div
           class="col-12 col-lg-6 aos-init aos-animate text-center"
@@ -27,6 +27,19 @@
     </div>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "header": "Learn about your money and watch it grow",
+    "disclaimer": "* we won't share your data with third parties"
+  },
+  "sp": {
+    "header": "Learn about your money and watch it",
+    "disclaimer": "* we won't share your data with third"
+  }
+}
+</i18n>
 
 <script>
 import Subscribe from './Subscribe.vue'

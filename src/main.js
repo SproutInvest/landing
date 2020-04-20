@@ -8,9 +8,10 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import App from './App.vue'
- 
+import i18n from './i18n'
+
 library.add(faSpinner)
- 
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
@@ -19,5 +20,6 @@ Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
 new Vue({
+  i18n,
   render: h => h(App),
 }).$mount('#app')

@@ -7,48 +7,48 @@ module.exports = {
     browser: true,
   },
   parserOptions: {
-    parser: "babel-eslint",
+    parser: 'babel-eslint',
     // specifying a module sourcetype prevent eslint from marking import statements as errors
-    sourceType: "module",
+    sourceType: 'module',
   },
   extends: [
     // use the recommended rule set for both plain javascript and vue
-    "eslint:recommended",
-    "plugin:vue/recommended",
+    'eslint:recommended',
+    'plugin:vue/recommended',
   ],
   rules: {
     // we should always disable console logs and debugging in production
-    "no-console": ["warn"],
-    "indent": [
-      "error",
+    'no-console': ['warn'],
+    'indent': [
+      'error',
       2,
     ],
-    "quotes": [
-      "error",
-      "single",
+    'quotes': [
+      'error',
+      'single',
       {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true,
-      }
-    ],
-    "linebreak-style": [
-      "error",
-      "unix",
-    ],
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "never"
+        'avoidEscape': true,
+        'allowTemplateLiterals': true,
       },
     ],
-    "semi": [
-      "error",
-      "never",
+    'linebreak-style': [
+      'error',
+      'unix',
     ],
-    "no-debugger": 0,
-  }
-};
+    'comma-dangle': [
+      'error',
+      {
+        'arrays': 'always-multiline',
+        'objects': 'always-multiline',
+        'imports': 'always-multiline',
+        'exports': 'always-multiline',
+        'functions': 'never',
+      },
+    ],
+    'semi': [
+      'error',
+      'never',
+    ],
+    'no-debugger': 0,
+  },
+}

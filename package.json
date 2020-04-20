@@ -2,12 +2,12 @@
   "name": "landing-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "git@github.com:Sprout-Saving/landing",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -24,9 +24,11 @@
     "jquery": "^3.4.1",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.5.2",
-    "vue-chartjs": "^3.5.0"
+    "vue-chartjs": "^3.5.0",
+    "vue-i18n": "^8.0.0"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
@@ -36,6 +38,7 @@
     "node-sass": "^4.13.1",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "~0.6.1",
     "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.6.11"
   },
@@ -56,5 +59,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "homepage": "git@github.com:Sprout-Saving/landing"
 }
