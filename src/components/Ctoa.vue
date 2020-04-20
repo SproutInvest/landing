@@ -10,7 +10,7 @@
 import Subscribe from './Subscribe.vue'
 
 export default {
-  name: 'Hero',
+  name: 'Ctoa',
   components: {
     Subscribe,
   },

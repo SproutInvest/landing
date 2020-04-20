@@ -5,7 +5,7 @@
   >
     <div class="text-center container">
       <h3 class="mb-5">
-        How Sprout Works
+        {{ $t('how') }}
       </h3>
       <video
         width="1000"
@@ -15,6 +15,17 @@
     </div>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "how": "How Sprout Works"
+  },
+  "es": {
+    "how": "Cómo funciona Sprout"
+  }
+}
+</i18n>
 
 <script>
 export default {

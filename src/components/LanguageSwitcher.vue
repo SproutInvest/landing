@@ -9,7 +9,7 @@
       height="15"
       width="30"
       alt="Mexico Flag"
-      @click="switchLanguage('sp')"
+      @click="switchLanguage('es')"
     >
     <img
       v-else
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'LanguageSwitcher',
   components: {},
@@ -35,8 +37,24 @@ export default {
   },
   watch: {
     locale (val) {
+      localStorage.setItem('locale', val)
       this.$i18n.locale = val
     },
+  },
+  mounted () {
+    const locale = localStorage.getItem('locale')
+    if (locale) {
+      this.locale = locale
+    } else {
+      axios
+        .get('https://ipinfo.io?token=b23e31692a8879')
+        .then(response => {
+          const country = response.data.country
+          if (country === 'MX' || country === 'ES') {
+            this.locale = 'es'
+          }
+        })
+    }
   },
   methods: {
     switchLanguage(lang) {

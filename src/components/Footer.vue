@@ -3,13 +3,24 @@
     id="footer"
     class="ss-footer py-5 text-center"
   >
-    <p>Email us at <a href="mailto:contact@sproutsaving.com">contact@sproutsaving.com</a>  | © 2020 Sprout Saving</p>
+    <p>{{ $t('at') }} <a href="mailto:contact@sproutsaving.com">contact@sproutsaving.com</a>  | © 2020 Sprout Invest</p>
   </div>
 </template>
 
+<i18n>
+{
+  "en": {
+    "at": "Email us at"
+  },
+  "es": {
+    "at": "Envíenos un email a"
+  }
+}
+</i18n>
+
 <script>
 export default {
-  name: 'Header',
+  name: 'Footer',
   props: {},
 }
 </script>

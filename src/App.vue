@@ -33,9 +33,6 @@ export default {
     Ctoa,
     Footer,
   },
-  mounted: function() {
-    this.locale = this.$i18n.locale
-  },
 }
 </script>
 

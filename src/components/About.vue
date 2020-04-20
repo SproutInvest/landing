@@ -7,9 +7,9 @@
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
           <h3 class="mb-5">
-            Learn the 101 of your money
+            {{ $t('h1') }}
           </h3>
-          <p>With Sprout, you will be able to understand all about your finances and how they work.</p>
+          <p>{{ $t('t1') }}</p>
         </div>
         <div
           class="col-12 col-lg-6 aos-init aos-animate text-center"
@@ -20,8 +20,8 @@
             1
           </h1>
           <ul class="text-left ml-5 mb-5">
-            <li>Clear overview of all finances</li>
-            <li>All of your accounts in one place</li>
+            <li>{{ $t('l11') }}</li>
+            <li>{{ $t('l12') }}</li>
           </ul>
         </div>
       </div>
@@ -35,24 +35,24 @@
             2
           </h1>
           <ul class="text-left ml-5 mb-5">
-            <li>Set custom spending limits</li>
-            <li>Get realtime budget alerts</li>
-            <li>Devise a clear spending plan</li>
+            <li>{{ $t('l21') }}</li>
+            <li>{{ $t('l22') }}</li>
+            <li>{{ $t('l23') }}</li>
           </ul>
         </div>
         <div class="col-12 col-lg-6 text-center text-lg-left">
           <h3 class="mb-5">
-            Define financial goals
+            {{ $t('h2') }}
           </h3>
-          <p>Milestones cannot be achieved if they are not first set. Let us help you with that!</p>
+          <p>{{ $t('t2') }}</p>
         </div>
       </div>
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
           <h3 class="mb-5">
-            Track your money
+            {{ $t('h3') }}
           </h3>
-          <p>And watch it grow, earn much more compared to traditional banks with our team of experts and our smart algorithms.</p>
+          <p>{{ $t('t3') }}</p>
         </div>
         <div
           class="col-12 col-lg-6 aos-init aos-animate text-center"
@@ -63,9 +63,9 @@
             3
           </h1>
           <ul class="text-left ml-5 mb-5">
-            <li>Cancel wasteful accounts</li>
-            <li>Schedule payments on the go</li>
-            <li>Manage your debt</li>
+            <li>{{ $t('l31') }}</li>
+            <li>{{ $t('l32') }}</li>
+            <li>{{ $t('l33') }}</li>
           </ul>
         </div>
       </div>
@@ -73,9 +73,46 @@
   </div>
 </template>
 
+<i18n>
+{
+  "en": {
+    "h1": "Learn the 101 of your money",
+    "t1": "With Sprout, you will be able to understand all about your finances and how they work.",
+    "l11": "Clear overview of all finances",
+    "l12": "All of your accounts in one place",
+    "h2": "Define financial goals",
+    "t2": "Milestones cannot be achieved if they are not first set. Let us help you with that!",
+    "l21": "Set custom spending limits",
+    "l22": "Get realtime budget alerts",
+    "l23": "Devise a clear spending plan",
+    "h3": "Track your money",
+    "t3": "And watch it grow, earn much more compared to traditional banks with our team of experts and our smart algorithms.",
+    "l31": "Cancel wasteful accounts",
+    "l32": "Schedule payments on the go",
+    "l33": "Manage your debt"
+  },
+  "es": {
+    "h1": "Aprende el 101 de tu dinero",
+    "t1": "Con Sprout, podrás comprender todo acerca de tus finanzas y cómo funcionan.",
+    "l11": "Resumen claro de todas las finanzas",
+    "l12": "Todas tus cuentas en un solo lugar",
+    "h2": "Definir objetivos financieros",
+    "t2": "Los hitos no se pueden lograr si no se establecen primero. ¡Permítanos ayudarlo con eso!",
+    "l21": "Establecer límites de gasto personalizados",
+    "l22": "Recibe alertas de presupuesto en tiempo real",
+    "l23": "Diseñar un plan de gastos claro",
+    "h3": "Rastrea tu dinero",
+    "t3": "Y vea cómo crece, gane mucho más en comparación con los bancos tradicionales con nuestro equipo de expertos y nuestros algoritmos inteligentes.",
+    "l31": "Cancelar cuentas derrochadoras",
+    "l32": "Programe pagos sobre la marcha",
+    "l33": "Administra tu deuda"
+  }
+}
+</i18n>
+
 <script>
 export default {
-  name: 'Demo',
+  name: 'About',
   props: {},
 }
 </script>

@@ -34,9 +34,9 @@
     "header": "Learn about your money and watch it grow",
     "disclaimer": "* we won't share your data with third parties"
   },
-  "sp": {
-    "header": "Learn about your money and watch it",
-    "disclaimer": "* we won't share your data with third"
+  "es": {
+    "header": "La plataforma que te ayuda a Invertir Fácil y Rápido desde $200 pesos",
+    "disclaimer": "* no compartiremos sus datos con terceros"
   }
 }
 </i18n>

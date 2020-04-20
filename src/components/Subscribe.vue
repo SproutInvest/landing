@@ -8,7 +8,7 @@
         v-model="name"
         type="text"
         class="form-control px-3"
-        placeholder="Full Name"
+        :placeholder="$t('fullName')"
         aria-label="Name"
       >
       <div class="input-group-append">
@@ -16,7 +16,7 @@
           v-model="age"
           type="number"
           class="form-control px-3"
-          placeholder="Age"
+          :placeholder="$t('age')"
           aria-label="Age"
         >
       </div>
@@ -40,7 +40,7 @@
           type="submit"
           @click="subscribeEmail"
         >
-          <span v-show="!submitting">Subscribe</span>
+          <span v-show="!submitting">{{ $t('subscribe') }}</span>
           <font-awesome-icon
             v-show="submitting"
             icon="spinner"
@@ -52,10 +52,27 @@
       v-show="submitted"
       class="ss-submitted-text"
     >
-      Great! You'll be hearing from us very soon.
+      {{ $t('great') }}
     </div>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "fullName": "Full Name",
+    "age": "Age",
+    "subscribe": "Subscribe",
+    "great": "Great! You'll be hearing from us very soon."
+  },
+  "es": {
+    "fullName": "Nombre Completo",
+    "age": "Años",
+    "subscribe": "Suscribir",
+    "great": "¡Excelente! Tendremos noticias nuestras muy pronto."
+  }
+}
+</i18n>
 
 <script>
 import axios from 'axios'

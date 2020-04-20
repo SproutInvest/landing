@@ -35,25 +35,25 @@
               <a
                 href="/"
                 class="ss-header-link nav-link m-2 menu-item nav-active"
-              >Who are we?</a>
+              >{{ $t('who') }}</a>
             </li>
             <li class="nav-item">
               <a
                 href="#about"
                 class="ss-header-link nav-link m-2 menu-item"
-              >How does it work?</a>
+              >{{ $t('how') }}</a>
             </li>
             <li class="nav-item">
               <a
                 href="#footer"
                 class="ss-header-link nav-link m-2 menu-item"
-              >Start investing</a>
+              >{{ $t('start') }}</a>
             </li>
             <li class="nav-item">
               <a
                 href="#footer"
                 class="ss-header-link nav-link m-2 menu-item"
-              >Contact</a>
+              >{{ $t('contact') }}</a>
             </li>
             <li class="nav-item">
               <a
@@ -67,6 +67,23 @@
     </nav>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "who": "Who are we?",
+    "how": "How does it work?",
+    "start": "Start investing",
+    "contact": "Contact"
+  },
+  "es": {
+    "who": "¿Porque nosotros?",
+    "how": "¿Como funciona?",
+    "start": "Empieza a invertir",
+    "contact": "Contacto"
+  }
+}
+</i18n>
 
 <script>
 import LanguageSwitcher from './LanguageSwitcher'

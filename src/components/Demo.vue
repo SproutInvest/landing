@@ -16,7 +16,7 @@
         </div>
         <div class="col-12 col-lg-3 text-center text-lg-left">
           <div class="ss-demo-slider-section">
-            <label>Initial Investment Amount</label>
+            <label>{{ $t('initial') }}</label>
             <br>
             <label>{{ formatCurrency(initialAmount) }}</label>
             <b-form-input
@@ -30,7 +30,7 @@
               @change="updateChart"
             />
             <br><br>
-            <label>Monthly Deposit Amount</label>
+            <label>{{ $t('deposit') }}</label>
             <br>
             <label>{{ formatCurrency(monthlyDeposit) }}</label>
             <b-form-input
@@ -43,6 +43,20 @@
               step="100"
               @change="updateChart"
             />
+            <br><br>
+            <label>{{ $t('term') }}</label>
+            <br>
+            <label>{{ investmentTerm }} {{ $t('years') }}</label>
+            <b-form-input
+              id="investmentTermRange"
+              v-model="investmentTerm"
+              class="ss-demo-range"
+              type="range"
+              min="3"
+              max="40"
+              step="1"
+              @change="updateChart"
+            />
           </div>
         </div>
       </div>
@@ -50,42 +64,60 @@
   </div>
 </template>
 
+<i18n>
+{
+  "en": {
+    "initial": "Initial Investment Amount",
+    "deposit": "Monthly Deposit Amount",
+    "term": "Investment Term",
+    "years": "years"
+  },
+  "es": {
+    "initial": "Monto de Inversión Inicial",
+    "deposit": "Monto de Depósito Mensual",
+    "term": "Plazo de Inversión",
+    "years": "años"
+  }
+}
+</i18n>
+
 <script>
 import VueApexCharts from 'vue-apexcharts'
 
 const BANK_RATE = 0.02
 const SPROUT_RATE = 0.09
 
-function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate) {
+function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate, investmentTerm = 10) {
   let value = initialAmount
-  const now = new Date()
-  const year = now.getFullYear()
+  const year = 1
   let series = []
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < investmentTerm; i++) {
     series.push([year + i, value])
     value = Math.floor(value * (1 + rate)) + 12 * monthlyDeposit
   }
   return series
 }
 
-function getSeries(amount, deposit) {
+function getSeries(amount, deposit, term, locale) {
   return [
     {
-      name: 'Savings Bank',
-      data: generateSeries(amount, deposit, BANK_RATE),
+      name: locale === 'es' ? 'Caja de Ahorros' : 'Savings Bank',
+      data: generateSeries(amount, deposit, BANK_RATE, term),
     },
     {
-      name: 'Sprout Investment',
-      data: generateSeries(amount, deposit, SPROUT_RATE),
+      name: locale === 'es' ? 'Sprout Inversión' : 'Sprout Investment',
+      data: generateSeries(amount, deposit, SPROUT_RATE, term),
     },
   ]
 }
 
-const formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'MXN',
-  maximumSignificantDigits: 3,
-})
+const formatter = function (locale) {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: locale === 'es' ? 'MXN' : 'USD',
+    maximumSignificantDigits: 3,
+  })
+}
 
 export default {
   name: 'Demo',
@@ -95,18 +127,36 @@ export default {
   props: {},
   data: function() {
     return {
+      locale: 'en',
       initialAmount: 10000,
       monthlyDeposit: 1000,
-      series: getSeries(this.initialAmount, this.monthlyDeposit),
+      investmentTerm: 10,
+      series: getSeries(this.initialAmount, this.monthlyDeposit, this.investmentTerm, this.locale),
       chartOptions: {
         chart: {
           type: 'area',
           height: 1000,
           stacked: false,
+          toolbar: {
+            show: true,
+            offsetX: 0,
+            offsetY: 0,
+            tools: {
+              download: true,
+              selection: false,
+              zoom: false,
+              zoomin: false,
+              zoomout: false,
+              pan: false,
+              reset: false | '<img src="/static/icons/reset.png" width="20">',
+              customIcons: [],
+            },
+            autoSelected: 'zoom', 
+          },
           events: {
           },
         },
-        colors: ['#EFF0F3', '#40c7c0'],
+        colors: ['#EFF0F3', '#B3EBDE'],
         dataLabels: {
           enabled: false,
         },
@@ -138,18 +188,25 @@ export default {
               fontWeight: 400,
               cssClass: 'apexcharts-yaxis-label',
             },
-            formatter: (value) => { return formatter.format(value) },
+            formatter: (value) => { return formatter(this.locale).format(value) },
           },
         },
       },
     }
   },
+  mounted () {
+    const locale = localStorage.getItem('locale')
+    if (locale) {
+      this.locale = locale
+      this.updateChart()
+    }
+  },
   methods: {
     updateChart: function () {
-      this.series = getSeries(this.initialAmount, this.monthlyDeposit)
+      this.series = getSeries(this.initialAmount, this.monthlyDeposit, this.investmentTerm, this.locale)
     },
     formatCurrency: function (value) {
-      return formatter.format(value)
+      return formatter(this.locale).format(value)
     },
   },
 }
