@@ -22,6 +22,7 @@
           <ul class="text-left ml-5 mb-5">
             <li>{{ $t('l11') }}</li>
             <li>{{ $t('l12') }}</li>
+            <li>{{ $t('l13') }}</li>
           </ul>
         </div>
       </div>
