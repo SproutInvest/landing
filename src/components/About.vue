@@ -92,20 +92,21 @@
     "l33": "Manage your debt"
   },
   "es": {
-    "h1": "Aprende el 101 de tu dinero",
-    "t1": "Con Sprout, podrás comprender todo acerca de tus finanzas y cómo funcionan.",
-    "l11": "Resumen claro de todas las finanzas",
-    "l12": "Todas tus cuentas en un solo lugar",
-    "h2": "Definir objetivos financieros",
-    "t2": "Los hitos no se pueden lograr si no se establecen primero. ¡Permítanos ayudarlo con eso!",
-    "l21": "Establecer límites de gasto personalizados",
-    "l22": "Recibe alertas de presupuesto en tiempo real",
-    "l23": "Diseñar un plan de gastos claro",
-    "h3": "Rastrea tu dinero",
-    "t3": "Y vea cómo crece, gane mucho más en comparación con los bancos tradicionales con nuestro equipo de expertos y nuestros algoritmos inteligentes.",
-    "l31": "Cancelar cuentas derrochadoras",
-    "l32": "Programe pagos sobre la marcha",
-    "l33": "Administra tu deuda"
+    "h1": "Aprende Finanzas Personales",
+    "t1": "Con Spröut, tendrás la oportunidad de aprender desde lo más básico hasta lo más avanzado del mundo de las Finanzas, desde que es la Inflación y como te impacta, hasta estrategias para hacer crecer tu dinero mientras te diviertes.",
+    "l11": "Camino claro de aprendizaje financiero",
+    "l12": "Pon el aprendizaje en práctica y empieza a hacer crecer tu dinero",
+    "l13": "Te aconsejamos para que uses mejor tu Dinero a un precio accesible",
+    "h2": "Define tus Metas de Inversión",
+    "t2": "Spröut es una herramienta para alcanzar todas tus metas Ya sea que busques retirarte cómodamente o comprar un coche o una casa.",
+    "l21": "Planea tus metas de inversión con Spröut",
+    "l22": "Invierte automáticamente y sin darte cuenta",
+    "l23": "Crea retos de inversión con Familia y Amigos",
+    "h3": "Lleva un registro de tu Dinero",
+    "t3": "En lugar de que tu dinero pierda valor en una cuenta bancaria, ve como día a día tu dinero crece con Spröut. Usamos la mejor tecnología para elegir la mejor inversión para ti.",
+    "l31": "Usamos la misma encriptación que tu Banco",
+    "l32": "Fácil de depositar y retirar dinero",
+    "l33": "El precio más bajo para una cuenta de Inversión en México"
   }
 }
 </i18n>
