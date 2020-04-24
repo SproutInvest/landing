@@ -5,24 +5,54 @@
   >
     <div class="container">
       <div class="row align-items-center justify-content-between py-5 py-md-10">
-        <div
-          v-for="option in options"
-          :key="option.id"
-          class="col-12 col-lg-4 text-center"
-        >
+        <div class="col-12 col-lg-4 text-center">
           <div class="ss-buy-box">
             <img
               class="ss-buy-image"
-              :src="option.image"
+              :src="image1"
             >
             <h3 class="ss-buy-title">
-              {{ option.title }}
+              {{ $t('option1title') }}
             </h3>
             <p class="ss-buy-description">
-              {{ option.description }}
+              {{ $t('option1description') }}
             </p>
             <p class="ss-buy-price">
-              Price: {{ option.price }}
+              Price: {{ $t('option1price') }}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <div class="ss-buy-box">
+            <img
+              class="ss-buy-image"
+              :src="image2"
+            >
+            <h3 class="ss-buy-title">
+              {{ $t('option2title') }}
+            </h3>
+            <p class="ss-buy-description">
+              {{ $t('option2description') }}
+            </p>
+            <p class="ss-buy-price">
+              Price: {{ $t('option2price') }}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <div class="ss-buy-box">
+            <img
+              class="ss-buy-image"
+              :src="image3"
+            >
+            <h3 class="ss-buy-title">
+              {{ $t('option3title') }}
+            </h3>
+            <p class="ss-buy-description">
+              {{ $t('option3description') }}
+            </p>
+            <p class="ss-buy-price">
+              Price: {{ $t('option3price') }}
             </p>
           </div>
         </div>
@@ -31,6 +61,33 @@
   </div>
 </template>
 
+<i18n>
+{
+  "en": {
+    "option1title": "Sapling",
+    "option1description": "This is the description of a basic plan",
+    "option1price": "Free",
+    "option2title": "Plant",
+    "option2description": "This is the description of a basic plan",
+    "option2price": "$20 / month",
+    "option3title": "Tree",
+    "option3description": "This is the description of a basic plan",
+    "option3price": "$50 / month"
+  },
+  "es": {
+    "option1title": "Sapling",
+    "option1description": "This is the description of a basic plan",
+    "option1price": "Free",
+    "option2title": "Plant",
+    "option2description": "This is the description of a basic plan",
+    "option2price": "$20 / month",
+    "option3title": "Tree",
+    "option3description": "This is the description of a basic plan",
+    "option3price": "$50 / month"
+  }
+}
+</i18n>
+
 <script>
 export default {
   name: 'Buy',
@@ -38,29 +95,9 @@ export default {
   props: {},
   data: function () {
     return {
-      options: [
-        {
-          id: 1,
-          image: require('../assets/sapling.png'),
-          title: 'Sapling',
-          description: 'This is the description of a basic plan',
-          price: 'Free',
-        },
-        {
-          id: 2,
-          image: require('../assets/leaf.png'),
-          title: 'Plant',
-          description: 'This is the description of an intermediate plan plan',
-          price: '$20 / month',
-        },
-        {
-          id: 3,
-          image: require('../assets/tree.png'),
-          title: 'Tree',
-          description: 'This is the description of the most expensive plan',
-          price: '$50 / month',
-        },
-      ],
+      image1: require('../assets/sapling.png'),
+      image2: require('../assets/leaf.png'),
+      image3: require('../assets/tree.png'),
     }
   },
 }
