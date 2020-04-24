@@ -14,9 +14,11 @@
             <h3 class="ss-buy-title">
               {{ $t('option1title') }}
             </h3>
-            <p class="ss-buy-description">
-              {{ $t('option1description') }}
-            </p>
+            <ul class="ss-buy-description text-left pl-5 pr-5">
+              <li>{{ $t('option1item1') }}</li>
+              <li>{{ $t('option1item2') }}</li>
+              <li>{{ $t('option1item3') }}</li>
+            </ul>
             <p class="ss-buy-price">
               Price: {{ $t('option1price') }}
             </p>
@@ -31,9 +33,11 @@
             <h3 class="ss-buy-title">
               {{ $t('option2title') }}
             </h3>
-            <p class="ss-buy-description">
-              {{ $t('option2description') }}
-            </p>
+            <ul class="ss-buy-description text-left pl-5 pr-5">
+              <li>{{ $t('option2item1') }}</li>
+              <li>{{ $t('option2item2') }}</li>
+              <li>{{ $t('option2item3') }}</li>
+            </ul>
             <p class="ss-buy-price">
               Price: {{ $t('option2price') }}
             </p>
@@ -48,9 +52,11 @@
             <h3 class="ss-buy-title">
               {{ $t('option3title') }}
             </h3>
-            <p class="ss-buy-description">
-              {{ $t('option3description') }}
-            </p>
+            <ul class="ss-buy-description text-left pl-5 pr-5">
+              <li>{{ $t('option3item1') }}</li>
+              <li>{{ $t('option3item2') }}</li>
+              <li>{{ $t('option3item3') }}</li>
+            </ul>
             <p class="ss-buy-price">
               Price: {{ $t('option3price') }}
             </p>
@@ -65,24 +71,36 @@
 {
   "en": {
     "option1title": "Sapling",
-    "option1description": "This is the description of a basic plan",
+    "option1item1": "This is the description of a basic plan",
+    "option1item2": "This is the description of a basic plan",
+    "option1item3": "This is the description of a basic plan",
     "option1price": "Free",
     "option2title": "Plant",
-    "option2description": "This is the description of a basic plan",
+    "option2item1": "This is the description of a basic plan",
+    "option2item2": "This is the description of a basic plan",
+    "option2item3": "This is the description of a basic plan",
     "option2price": "$20 / month",
     "option3title": "Tree",
-    "option3description": "This is the description of a basic plan",
+    "option3item1": "This is the description of a basic plan",
+    "option3item2": "This is the description of a basic plan",
+    "option3item3": "This is the description of a basic plan",
     "option3price": "$50 / month"
   },
   "es": {
     "option1title": "Sapling",
-    "option1description": "This is the description of a basic plan",
+    "option1item1": "This is the description of a basic plan",
+    "option1item2": "This is the description of a basic plan",
+    "option1item3": "This is the description of a basic plan",
     "option1price": "Free",
     "option2title": "Plant",
-    "option2description": "This is the description of a basic plan",
+    "option2item1": "This is the description of a basic plan",
+    "option2item2": "This is the description of a basic plan",
+    "option2item3": "This is the description of a basic plan",
     "option2price": "$20 / month",
     "option3title": "Tree",
-    "option3description": "This is the description of a basic plan",
+    "option3item1": "This is the description of a basic plan",
+    "option3item2": "This is the description of a basic plan",
+    "option3item3": "This is the description of a basic plan",
     "option3price": "$50 / month"
   }
 }
@@ -122,8 +140,7 @@ export default {
   font-family: $ss-font-family-special
 .ss-buy-description
   font-size: 1rem
-  margin: 1rem
-  min-height: 3rem
+  min-height: 5rem
 .ss-buy-price
   font-family: $ss-font-family-special
   font-weight: 600
