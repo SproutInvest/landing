@@ -77,19 +77,20 @@
 {
   "en": {
     "h1": "Learn the 101 of your money",
-    "t1": "With Sprout, you will be able to understand all about your finances and how they work.",
-    "l11": "Clear overview of all finances",
-    "l12": "All of your accounts in one place",
+    "t1": "With Sprout, you will be able to understand all about your finances and how they work, while having fun.",
+    "l11": "Clear path to financial learning",
+    "l12": "Put learning into practice and start growing your money",
+    "l13": "Get advice on how to make your money work for you",
     "h2": "Define financial goals",
     "t2": "Milestones cannot be achieved if they are not first set. Let us help you with that!",
-    "l21": "Set custom spending limits",
-    "l22": "Get realtime budget alerts",
-    "l23": "Devise a clear spending plan",
+    "l21": "Plan your investment goals",
+    "l22": "Invest automatically without any worry",
+    "l23": "Create investment challenges with Family and Friends",
     "h3": "Track your money",
-    "t3": "And watch it grow, earn much more compared to traditional banks with our team of experts and our smart algorithms.",
-    "l31": "Cancel wasteful accounts",
-    "l32": "Schedule payments on the go",
-    "l33": "Manage your debt"
+    "t3": "And watch it grow, earn much more compared to traditional saving accounts with our team of experts and our smart algorithms.",
+    "l31": "Easy to deposit and withdraw money",
+    "l32": "Track investments daily",
+    "l33": "The lowest price for investment account in Mexico"
   },
   "es": {
     "h1": "Aprende Finanzas Personales",
