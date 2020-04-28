@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
-          <h1 class="mb-5">
+          <h1 class="mb-2">
             {{ $t('header') }}
           </h1>
           <h3 class="mb-5">
@@ -63,7 +63,7 @@ export default {
 h1
   font-size: 2.25rem
 h3
-  font-size: 1.2rem
+  font-size: 1rem
 .ss-hero
   background-color: $ss-bg-color
 .ss-hero-image

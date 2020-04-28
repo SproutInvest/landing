@@ -32,8 +32,8 @@ module.exports = {
       },
     ],
     'linebreak-style': [
-      'error',
-      'unix',
+      'warn',
+      'windows',
     ],
     'comma-dangle': [
       'error',
