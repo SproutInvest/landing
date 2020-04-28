@@ -35,12 +35,12 @@
 {
   "en": {
     "header": "Learn about your money and watch it grow",
-    "subHeader": "Test",
+    "subHeader": "We believe that everyone should be able to achieve financial independence. Our dedicated team of investment professionals is developing Sprout to educate and help you to start investing.",
     "disclaimer": "* we won't share your data with third parties"
   },
   "es": {
     "header": "La plataforma que te ayuda a Invertir Fácil y Rápido desde $200 pesos",
-    "subHeader": "Test",
+    "subHeader": "Creemos que todo el mundo debería ser capaz de lograr la independencia financiera. Nuestro dedicado equipo de profesionales de inversión está desarrollando Sprout para educarlo y ayudarle a empezar a invertir.",
     "disclaimer": "* no compartiremos sus datos con terceros"
   }
 }
