@@ -9,6 +9,9 @@
           <h1 class="mb-5">
             {{ $t('header') }}
           </h1>
+          <h3 class="mb-5">
+            {{ $t('subHeader') }}
+          </h3>
           <Subscribe />
           <small>{{ $t('disclaimer') }}</small>
         </div>
@@ -32,10 +35,12 @@
 {
   "en": {
     "header": "Learn about your money and watch it grow",
+    "subHeader": "Test",
     "disclaimer": "* we won't share your data with third parties"
   },
   "es": {
     "header": "La plataforma que te ayuda a Invertir Fácil y Rápido desde $200 pesos",
+    "subHeader": "Test",
     "disclaimer": "* no compartiremos sus datos con terceros"
   }
 }
@@ -57,6 +62,8 @@ export default {
 <style scoped lang="sass">
 h1
   font-size: 2.25rem
+h3
+  font-size: 1.2rem
 .ss-hero
   background-color: $ss-bg-color
 .ss-hero-image
