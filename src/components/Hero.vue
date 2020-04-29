@@ -12,8 +12,15 @@
           <h3 class="mb-5">
             {{ $t('subHeader') }}
           </h3>
-          <Subscribe />
-          <small>{{ $t('disclaimer') }}</small>
+          <h4 class="mt-5">
+            {{ $t('ctoa') }}
+          </h4>
+          <!-- <Subscribe />
+          <small>{{ $t('disclaimer') }}</small> -->
+          <a
+                href="#footer"
+                class="btn"
+              >{{ $t('start') }}</a>
         </div>
         <div
           class="col-12 col-lg-6 aos-init aos-animate text-center"
@@ -36,23 +43,27 @@
   "en": {
     "header": "Learn about your money and watch it grow",
     "subHeader": "We believe that everyone should be able to achieve financial independence. Our dedicated team of investment professionals is developing Sprout to educate and help you to start investing.",
-    "disclaimer": "* we won't share your data with third parties"
+    "disclaimer": "* we won't share your data with third parties",
+    "ctoa": "To learn more about investing your money and stay updated about the latest sprout news",
+    "start": "Click Here"
   },
   "es": {
     "header": "La plataforma que te ayuda a Invertir Fácil y Rápido desde $200 pesos",
-    "subHeader": "En Sprout creemos todos deberían tener la oportunidad de ser financieramente independiente. Nuestro equipo de expertos está desarrollando Sprout para llevarte paso a paso para que empieces a invertir.",
-    "disclaimer": "* no compartiremos sus datos con terceros"
+    "subHeader": "En Sprout creemos que todos deberían tener la oportunidad de ser financieramente independientes. Nuestro equipo de expertos está desarrollando Sprout para guiarte paso a paso en tus primeras inversiones.",
+    "disclaimer": "* no compartiremos sus datos con terceros",
+    "ctoa": "Estás interesado en hacer crecer tu dinero y enterarte de las últimas novedades de Sprout?",
+    "start": "Click Here"
   }
 }
 </i18n>
 
 <script>
-import Subscribe from './Subscribe.vue'
+// import Subscribe from './Subscribe.vue'
 
 export default {
   name: 'Hero',
   components: {
-    Subscribe,
+    // Subscribe,
   },
   props: {},
 }
@@ -64,9 +75,21 @@ h1
   font-size: 2.25rem
 h3
   font-size: 1rem
+h4
+  font-size: 0.9rem
+  font-style: italic
 .ss-hero
   background-color: $ss-bg-color
 .ss-hero-image
   width: 75%
   margin: 0 auto
+.btn
+  color: $ss-font-color-black
+  background-color: #ffffff
+  border-color: #ffffff
+  border-top-left-radius: 0.25rem !important
+  border-bottom-left-radius: 0.25rem !important
+  border-top-right-radius: 0.25rem !important
+  border-bottom-right-radius: 0.25rem !important
+  min-width: 8rem
 </style>

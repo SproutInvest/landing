@@ -11,7 +11,7 @@
             <img
               src="../assets/logo.png"
               height="60"
-              width="120"
+              width="150"
               alt="Sprout Logo"
             >
           </a>

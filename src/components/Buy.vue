@@ -21,7 +21,7 @@
               <li>{{ $t('option1item4') }}</li>
             </ul>
             <p class="ss-buy-price">
-              Price: {{ $t('option1price') }}
+              {{ $t('option1price') }}
             </p>
           </div>
         </div>
@@ -41,7 +41,7 @@
               <li>{{ $t('option2item4') }}</li>
             </ul>
             <p class="ss-buy-price">
-              Price: {{ $t('option2price') }}
+              {{ $t('option2price') }}
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@
               <li>{{ $t('option3item4') }}</li>
             </ul>
             <p class="ss-buy-price">
-              Price: {{ $t('option3price') }}
+              {{ $t('option3price') }}
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@
     "option2item3": "Empieza a Invertir desde $200 pesos",
     "option2item4": "Acceso a Inversiones en Portafolios de Inversión diseñados por Expertos",
     "option2price": "$25 pesos al Mes o $250 pesos al año",
-    "option3title": "Inversionista",
+    "option3title": "Investor",
     "option3item1": "Todas las funciones de Smart Saver",
     "option3item2": "Inversiones desde $30 mil pesos",
     "option3item3": "Consultas permanentes con nuestros expertos",
@@ -140,7 +140,7 @@ export default {
   padding: 0 0 2rem 0
   margin: 1rem
 .ss-buy-image
-  width: 100%
+  width: 70%
 .ss-buy-title
   font-size: 1.75rem
   margin: 1rem
@@ -148,7 +148,7 @@ export default {
   font-family: $ss-font-family-special
 .ss-buy-description
   font-size: 1rem
-  min-height: 12rem
+  min-height: 13rem
 .ss-buy-price
   font-family: $ss-font-family-special
   font-weight: 600
