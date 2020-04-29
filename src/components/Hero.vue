@@ -40,7 +40,7 @@
   },
   "es": {
     "header": "La plataforma que te ayuda a Invertir Fácil y Rápido desde $200 pesos",
-    "subHeader": "Creemos que todo el mundo debería ser capaz de lograr la independencia financiera. Nuestro dedicado equipo de profesionales de inversión está desarrollando Sprout para educarlo y ayudarle a empezar a invertir.",
+    "subHeader": "En Sprout creemos todos deberían tener la oportunidad de ser financieramente independiente. Nuestro equipo de expertos está desarrollando Sprout para llevarte paso a paso para que empieces a invertir.",
     "disclaimer": "* no compartiremos sus datos con terceros"
   }
 }

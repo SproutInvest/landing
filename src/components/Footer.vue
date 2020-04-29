@@ -3,7 +3,7 @@
     id="footer"
     class="ss-footer py-5 text-center"
   >
-    <p>{{ $t('at') }} <a href="mailto:contact@sproutsaving.com">contact@sproutsaving.com</a>  | © 2020 Sprout Invest</p>
+    <p>{{ $t('at') }} <a href="mailto:contact@sproutinvest.io">contact@sproutinvest.io</a>  | © 2020 Sprout Invest</p>
   </div>
 </template>
 
