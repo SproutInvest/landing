@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      v-show="!submitted"
+      v-show="!submitted && showOptions"
       class="ss-input-group input-group mb-1"
     >
       <input
@@ -12,13 +12,20 @@
         aria-label="Name"
       >
       <div class="input-group-append">
-        <input
-          v-model="age"
-          type="number"
-          class="form-control px-3"
-          :placeholder="$t('age')"
-          aria-label="Age"
-        >
+        <select v-model="plan">
+          <option
+            selected
+            value="saver"
+          >
+            Saver
+          </option>
+          <option value="smart_saver">
+            Smart Saver
+          </option>
+          <option value="investor">
+            Investor
+          </option>
+        </select>
       </div>
     </div>
     <div
@@ -79,12 +86,17 @@ import axios from 'axios'
 
 export default {
   name: 'Subscribe',
-  props: {},
+  props: {
+    showOptions: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: function() {
     return {
       email: null,
       name: null,
-      age: null,
+      plan: 'saver',
       submitted: false,
       submitting: false,
     }
@@ -98,7 +110,7 @@ export default {
       this.submitting = true
       axios
         .post(url, {
-          email: `${ this.email } - ${ this.name } - ${ this.age }`,
+          email: `${ this.email } - ${ this.name } - ${ this.plan }`,
         })
         .then(() => {
           this.submitting = false
@@ -153,12 +165,14 @@ export default {
       border-top-right-radius: 0.25rem !important
       border-bottom-right-radius: 0.25rem !important
       min-width: 10rem
-    input
+    select
       width: 10rem
+      border-width: 0
       border-top-left-radius: 0
       border-bottom-left-radius: 0
       border-top-right-radius: 0.25rem !important
       border-bottom-right-radius: 0.25rem !important
+      background: rgba(255, 255, 255, 0.3)
 .ss-submitted-text
   border-top-right-radius: 0.25rem
   border-bottom-right-radius: 0.25rem

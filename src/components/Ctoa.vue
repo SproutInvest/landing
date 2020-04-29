@@ -1,7 +1,7 @@
 <template>
   <div class="ss-ctoa">
     <div class="container">
-      <Subscribe />
+      <Subscribe show-options="true" />
     </div>
   </div>
 </template>

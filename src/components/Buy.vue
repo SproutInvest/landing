@@ -154,4 +154,5 @@ export default {
   font-weight: 600
   font-size: 1rem
   margin: 1rem
+  min-height: 5rem
 </style>
