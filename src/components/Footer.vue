@@ -1,10 +1,12 @@
 <template>
-  <div
-    id="footer"
-    class="ss-footer py-5 text-center"
-  >
-    <p>{{ $t('at') }} <a href="mailto:contact@sproutinvest.io">contact@sproutinvest.io</a>  | © 2020 Sprout Invest</p>
-  </div>
+  <div>
+    <div
+      id="footer"
+      class="ss-footer py-5 text-center"
+    >
+      <p>{{ $t('at') }} <a href="mailto:contact@sproutinvest.io">contact@sproutinvest.io</a>  | © 2020 Sprout Invest</p>
+    </div>
+  </div>  
 </template>
 
 <i18n>

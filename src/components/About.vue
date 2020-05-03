@@ -6,6 +6,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
+          <span class="ss-about-number">1</span>
           <h3 class="mb-5">
             {{ $t('h1') }}
           </h3>
@@ -16,9 +17,11 @@
           data-aos="zoom-in"
           data-aos-delay="500"
         >
-          <h1>
-            1
-          </h1>
+          <img
+            class="ss-about-image"
+            src="../assets/about1.png"
+            alt="Sprout About Image 1"
+          >
           <ul class="text-left ml-5 mb-5">
             <li>{{ $t('l11') }}</li>
             <li>{{ $t('l12') }}</li>
@@ -32,9 +35,11 @@
           data-aos="zoom-in"
           data-aos-delay="500"
         >
-          <h1>
-            2
-          </h1>
+          <img
+            class="ss-about-image"
+            src="../assets/about2.png"
+            alt="Sprout About Image 2"
+          >
           <ul class="text-left ml-5 mb-5">
             <li>{{ $t('l21') }}</li>
             <li>{{ $t('l22') }}</li>
@@ -42,6 +47,7 @@
           </ul>
         </div>
         <div class="col-12 col-lg-6 text-center text-lg-left">
+          <span class="ss-about-number">2</span>
           <h3 class="mb-5">
             {{ $t('h2') }}
           </h3>
@@ -50,6 +56,7 @@
       </div>
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
+          <span class="ss-about-number">3</span>
           <h3 class="mb-5">
             {{ $t('h3') }}
           </h3>
@@ -60,9 +67,11 @@
           data-aos="zoom-in"
           data-aos-delay="500"
         >
-          <h1>
-            3
-          </h1>
+          <img
+            class="ss-about-image"
+            src="../assets/about3.png"
+            alt="Sprout About Image 3"
+          >
           <ul class="text-left ml-5 mb-5">
             <li>{{ $t('l31') }}</li>
             <li>{{ $t('l32') }}</li>
@@ -95,12 +104,12 @@
   },
   "es": {
     "h1": "Aprende Finanzas Personales",
-    "t1": "Con Spröut, tendrás la oportunidad de aprender desde lo más básico hasta lo más avanzado del mundo de las Finanzas, desde que es la Inflación y como te impacta, hasta estrategias para hacer crecer tu dinero mientras te diviertes.",
+    "t1": "Con Sprout, tendrás la oportunidad de aprender desde lo más básico hasta lo más avanzado del mundo de las Finanzas",
     "l11": "Camino claro de aprendizaje financiero",
     "l12": "Pon el aprendizaje en práctica y empieza a hacer crecer tu dinero",
     "l13": "Te aconsejamos para que uses mejor tu Dinero a un precio accesible",
     "h2": "Define tus Metas de Inversión",
-    "t2": "Spröut es una herramienta para alcanzar todas tus metas Ya sea que busques retirarte cómodamente o comprar un coche o una casa.",
+    "t2": "En lugar de que tu dinero pierda valor en una cuenta bancaria, observa como día a día tu dinero crece con Sprout. Usamos la mejor tecnología para elegir la mejor inversión para ti",
     "l21": "Planea tus metas de inversión con Spröut",
     "l22": "Invierte automáticamente y sin darte cuenta",
     "l23": "Crea retos de inversión con Familia y Amigos",
@@ -127,6 +136,13 @@ h1
   font-family: $ss-font-family-special
   color: $ss-font-color-blue
   font-weight: 700
+.ss-about-number
+  font-size: 4rem
+  font-family: $ss-font-family-special
+  color: $ss-font-color-blue
+  font-weight: 700
+  display: inline-block
+  margin-right: 1rem
 li
   font-size: 1.2rem
   font-family: $ss-font-family-basic
@@ -138,10 +154,13 @@ h3
   font-weight: 700
   line-height: 1.5
   display: inline-block
-  border-bottom: 3px solid $ss-color-gold
+  border-bottom: 10px solid $ss-bg-color
   // text-decoration: underline solid $ss-color-gold
 p
   font-size: 1.15rem
   font-family: $ss-font-family-special
   color: $ss-font-color-blue
+.ss-about-image
+  width: 50%
+  margin: 0 auto
 </style>
