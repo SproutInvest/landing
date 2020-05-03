@@ -57,6 +57,9 @@
               step="1"
               @change="updateChart"
             />
+            <br>
+            <br>
+            <small>{{ $t('disclaimer') }}</small>
           </div>
         </div>
       </div>
@@ -70,13 +73,15 @@
     "initial": "Initial Investment Amount",
     "deposit": "Monthly Deposit Amount",
     "term": "Investment Term",
-    "years": "years"
+    "years": "years",
+    "disclaimer": "*assuming risk-free rate of 6%"
   },
   "es": {
     "initial": "Monto de Inversión Inicial",
     "deposit": "Monto de Depósito Mensual",
     "term": "Plazo de Inversión",
-    "years": "años"
+    "years": "años",
+    "disclaimer": "*Tasa Libre de Riesgo 6%"
   }
 }
 </i18n>
@@ -101,11 +106,11 @@ function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate, inve
 function getSeries(amount, deposit, term, locale) {
   return [
     {
-      name: locale === 'es' ? 'Caja de Ahorros' : 'Savings Bank',
+      name: locale === 'es' ? 'Banco' : 'Savings Bank',
       data: generateSeries(amount, deposit, BANK_RATE, term),
     },
     {
-      name: locale === 'es' ? 'Sprout Inversión' : 'Sprout Investment',
+      name: locale === 'es' ? 'Inversión en Sprout' : 'Sprout Investment',
       data: generateSeries(amount, deposit, SPROUT_RATE, term),
     },
   ]
@@ -235,4 +240,6 @@ export default {
   background: $ss-font-color-sprout
 .ss-demo-range::-ms-thumb
   background: $ss-font-color-sprout
+small
+  font-size: 0.8rem
 </style>

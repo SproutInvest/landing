@@ -18,9 +18,9 @@
           <!-- <Subscribe />
           <small>{{ $t('disclaimer') }}</small> -->
           <a
-                href="#footer"
-                class="btn"
-              >{{ $t('start') }}</a>
+            href="#footer"
+            class="btn"
+          >{{ $t('start') }}</a>
         </div>
         <div
           class="col-12 col-lg-6 aos-init aos-animate text-center"
@@ -29,7 +29,7 @@
         >
           <img
             class="ss-hero-image"
-            src="../assets/hero.png"
+            :src="getImgUrl()"
             alt="Sprout Hero Image"
           >
         </div>
@@ -66,6 +66,22 @@ export default {
     // Subscribe,
   },
   props: {},
+  data: function() {
+    return {
+      locale: 'en',
+    }
+  },
+  mounted () {
+    const locale = localStorage.getItem('locale')
+    if (locale) {
+      this.locale = locale
+    }
+  },
+  methods: {
+    getImgUrl() {
+      return require(`../assets/hero_${this.locale}.png`)
+    },
+  },
 }
 </script>
 
@@ -75,13 +91,14 @@ h1
   font-size: 2.25rem
 h3
   font-size: 1rem
+  // text-align: justify
 h4
   font-size: 0.9rem
   font-style: italic
 .ss-hero
   background-color: $ss-bg-color
 .ss-hero-image
-  width: 75%
+  width: 90%
   margin: 0 auto
 .btn
   color: $ss-font-color-black
