@@ -15,7 +15,7 @@
     "at": "Email us at"
   },
   "es": {
-    "at": "Envíenos un email a"
+    "at": "Contáctanos"
   }
 }
 </i18n>
