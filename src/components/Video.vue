@@ -11,6 +11,7 @@
         width="1000"
         controls
         src="../assets/video.mp4"
+        @onplay="onVideoPlay()"
       />
     </div>
   </div>
@@ -32,6 +33,16 @@ export default {
   name: 'Video',
   components: {},
   props: {},
+  methods: {
+    onVideoPlay() {
+      console.log('tracking')
+      this.$ga.event({
+        eventCategory: 'video',
+        eventAction: 'play',
+        eventLabel: 'explainerVideo',
+      })
+    },
+  },
 }
 </script>
 
