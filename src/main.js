@@ -6,10 +6,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import SocialSharing from 'vue-social-sharing'
+import VueAnalytics from 'vue-analytics'
 
 import App from './App.vue'
 import i18n from './i18n'
+
+
 
 library.add(faSpinner)
 
@@ -20,8 +22,11 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
-Vue.use(SocialSharing)
+Vue.use(VueAnalytics, {
+  id: 'UA-164524931-1',
+})
 
+,
 new Vue({
   i18n,
   render: h => h(App),
