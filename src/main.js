@@ -7,6 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueAnalytics from 'vue-analytics'
+import VueVideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
 
 import App from './App.vue'
 import i18n from './i18n'
@@ -26,7 +28,8 @@ Vue.use(VueAnalytics, {
   id: 'UA-164524931-1',
 })
 
-,
+Vue.use(VueVideoPlayer)
+
 new Vue({
   i18n,
   render: h => h(App),

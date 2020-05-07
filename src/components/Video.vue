@@ -7,11 +7,14 @@
       <h3 class="mb-5">
         {{ $t('how') }}
       </h3>
-      <video
-        width="1000"
-        controls
-        src="../assets/video.mp4"
-        @onplay="onVideoPlay()"
+      <video-player
+        ref="videoPlayer"
+        class="video-player-box"
+        :options="playerOptions"
+        :playsinline="true"
+        @play="onPlayerPlay($event)"
+        @pause="onPlayerPause($event)"
+        @ended="onPlayerEnded($event)"
       />
     </div>
   </div>
@@ -33,6 +36,21 @@ export default {
   name: 'Video',
   components: {},
   props: {},
+  data() {
+    return {
+      playerOptions: {
+        // videojs options
+        muted: true,
+        language: 'en',
+        playbackRates: [0.7, 1.0, 1.5, 2.0],
+        sources: [{
+          type: 'video/mp4',
+          src: require('../assets/video.mp4'),
+        }],
+        poster: require('../assets/poster.png'),
+      },
+    }
+  },
   methods: {
     onVideoPlay() {
       console.log('tracking')
@@ -52,6 +70,8 @@ export default {
   background-color: $ss-bg-color
   padding-top: 3rem
   padding-bottom: 3rem
+.video-player-box
+  width: 50%
 h3
   font-size: 2.25rem
   font-family: $ss-font-family-special
