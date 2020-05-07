@@ -106,11 +106,12 @@ export default {
       if (!this.email) {
         return
       }
+      const locale = localStorage.getItem('locale')
       const url = 'https://hna2ztnutb.execute-api.us-east-2.amazonaws.com/default'
       this.submitting = true
       axios
         .post(url, {
-          email: `${ this.email } - ${ this.name } - ${ this.plan }`,
+          email: `${ this.email } - ${ this.name } - ${ this.plan } - ${ locale }`,
         })
         .then(() => {
           this.submitting = false

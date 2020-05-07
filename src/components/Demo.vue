@@ -131,6 +131,7 @@ export default {
   },
   props: {},
   data: function() {
+    const ga = this.$ga
     return {
       locale: 'en',
       initialAmount: 10000,
@@ -159,6 +160,13 @@ export default {
             autoSelected: 'zoom', 
           },
           events: {
+            click() {
+              ga.event({
+                eventCategory: 'demo',
+                eventAction: 'click',
+                eventLabel: 'chartClick',
+              })
+            },
           },
         },
         colors: ['#EFF0F3', '#B3EBDE'],
@@ -203,11 +211,18 @@ export default {
     const locale = localStorage.getItem('locale')
     if (locale) {
       this.locale = locale
-      this.updateChart()
+      this.updateChart(false)
     }
   },
   methods: {
-    updateChart: function () {
+    updateChart: function (sendEventToGa = true) {
+      if (sendEventToGa) {
+        this.$ga.event({
+          eventCategory: 'demo',
+          eventAction: 'slide',
+          eventLabel: 'chartSlide',
+        })
+      }
       this.series = getSeries(this.initialAmount, this.monthlyDeposit, this.investmentTerm, this.locale)
     },
     formatCurrency: function (value) {

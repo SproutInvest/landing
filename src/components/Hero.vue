@@ -20,6 +20,7 @@
           <a
             href="#footer"
             class="btn"
+            @click.capture="onCtoaClick"
           >{{ $t('start') }}</a>
         </div>
         <div
@@ -80,6 +81,13 @@ export default {
   methods: {
     getImgUrl() {
       return require(`../assets/hero_${this.locale}.png`)
+    },
+    onCtoaClick() {
+      this.$ga.event({
+        eventCategory: 'subscribe',
+        eventAction: 'click',
+        eventLabel: 'heroClickBtn',
+      })
     },
   },
 }

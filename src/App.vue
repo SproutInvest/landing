@@ -33,10 +33,8 @@ export default {
     Ctoa,
     Footer,
   },
-  methods: {
-    track () {
-      this.$ga.page('/')
-    },
+  mounted() {
+    this.$ga.page('/')
   },
 }
 </script>
