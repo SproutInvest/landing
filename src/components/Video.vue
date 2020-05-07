@@ -10,7 +10,7 @@
       <h3 class="mb-5">
         {{ $t('how') }}
       </h3>
-      <video-player
+      <!-- <video-player
         ref="videoPlayer"
         class="video-player-box vjs-big-play-centered"
         :options="playerOptions"
@@ -18,6 +18,12 @@
         @play="onPlayerPlay()"
         @pause="onPlayerPause()"
         @ended="onPlayerEnded()"
+      /> -->
+      <video
+        :width="videoWidth"
+        controls
+        src="../assets/video.mp4"
+        poster="../assets/poster.png"
       />
     </div>
   </div>
@@ -41,12 +47,12 @@ export default {
   props: {},
   data() {
     return {
+      videoWidth: 1000,
       playerOptions: {
-        // videojs options
-        muted: true,
+        muted: false,
         language: 'en',
         playbackRates: [0.7, 1.0, 1.5, 2.0],
-        width: 500,
+        width: this.videoWidth,
         sources: [{
           type: 'video/mp4',
           src: require('../assets/video.mp4'),
@@ -56,7 +62,8 @@ export default {
     }
   },
   mounted() {
-    this.playerOptions.width = this.$refs.videoContainer.clientWidth
+    this.videoWidth = Math.min(this.$refs.videoContainer.clientWidth - 30, 1000)
+    this.playerOptions.width = this.videoWidth
   },
   methods: {
     onPlayerPlay() {
@@ -96,17 +103,4 @@ h3
   color: $ss-font-color-blue
   font-weight: 700
   line-height: 1.5
-.video-js-responsive-container.vjs-hd
-  padding-top: 35.50%
-.video-js-responsive-container.vjs-sd
-  padding-top: 55%
-.video-js-responsive-container
-  width: 75%
-  position: relative
-.video-js-responsive-container .video-js
-  height: 100%
-  width: 100%
-  position: absolute
-  top: 0
-  left: 0
 </style>

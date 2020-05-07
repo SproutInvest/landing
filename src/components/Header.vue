@@ -1,70 +1,52 @@
 <template>
   <div>
-    <nav class="ss-header navbar navbar-expand-lg">
+    <b-navbar
+      toggleable="md"
+      type="light"
+      variant="faded"
+    >
       <div class="container">
-        <div class="d-flex flex-grow-1">
-          <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-          <a
-            class="navbar-brand d-none d-lg-inline-block"
-            href="#"
+        <b-navbar-brand href="#">
+          <img
+            src="../assets/logo.png"
+            height="60"
+            width="150"
+            alt="Sprout Logo"
           >
-            <img
-              src="../assets/logo.png"
-              height="60"
-              width="150"
-              alt="Sprout Logo"
-            >
-          </a>
-          <div class="w-100 text-right">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#myNavbar"
-            >
-              <span class="navbar-toggler-icon" />
-            </button>
-          </div>
-        </div>
-        <div
-          id="myNavbar"
-          class="collapse navbar-collapse flex-grow-1 text-right"
+        </b-navbar-brand>
+
+        <b-navbar-toggle target="nav-collapse" />
+
+        <b-collapse
+          id="nav-collapse"
+          is-nav
         >
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
-              <a
-                href="/"
-                class="ss-header-link nav-link m-2 menu-item nav-active"
-              >{{ $t('who') }}</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="#about"
-                class="ss-header-link nav-link m-2 menu-item"
-              >{{ $t('how') }}</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="#footer"
-                class="ss-header-link nav-link m-2 menu-item"
-              >{{ $t('start') }}</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="#footer"
-                class="ss-header-link nav-link m-2 menu-item"
-              >{{ $t('contact') }}</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href=""
-                class="ss-header-link nav-link m-2 menu-item"
-              ><LanguageSwitcher /></a>
-            </li>
-          </ul>
-        </div>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item
+              href="/"
+              class="ss-header-link"
+            >
+              {{ $t('who') }}
+            </b-nav-item>
+            <b-nav-item
+              href="#about"
+              class="ss-header-link"
+            >
+              {{ $t('how') }}
+            </b-nav-item>
+            <b-nav-item
+              href="#footer"
+              class="ss-header-link"
+            >
+              {{ $t('start') }}
+            </b-nav-item>
+            <b-nav-item href="">
+              <LanguageSwitcher />
+            </b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
       </div>
-    </nav>
+    </b-navbar>
   </div>
 </template>
 
@@ -102,9 +84,11 @@ export default {
 .ss-header
   background-color: $ss-bg-color-white
 .ss-header-link
-  color: $ss-font-color-black
-  font-weight: 700
-  transition: color 0.4s ease 0s
-  &:hover
-    color: $ss-font-color-sprout
+  .nav-link
+    font-weight: 700
+    transition: color 0.4s ease 0s
+    color: $ss-font-color-black
+    margin-right: 2rem
+    &:hover
+      color: $ss-font-color-sprout !important
 </style>
