@@ -90,7 +90,7 @@
     "option3item2": "Investments above $ 30 thousand pesos",
     "option3item3": "Permanent consultations with our experts",
     "option3item4": "Tailor-made investment strategies for you",
-    "option3price": "1% of the Average Balance of your Investment. If you don't earn money we won't charge you"
+    "option3price": "1% of the Average Balance of your Investment"
   },
   "es": {
     "option1title": "Saver",
@@ -109,7 +109,7 @@
     "option3item2": "Inversiones desde $30 mil pesos",
     "option3item3": "Consultas permanentes con nuestros expertos",
     "option3item4": "Diseño de tus estrategias de inversión a la medida",
-    "option3price": "1% del Saldo Promedio de tu Inversión. Si no ganas Dinero no te cobramos"
+    "option3price": "1% del Saldo Promedio de tu Inversión"
   }
 }
 </i18n>
