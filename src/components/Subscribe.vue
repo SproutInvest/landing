@@ -76,7 +76,7 @@
     "fullName": "Nombre Completo",
     "age": "Años",
     "subscribe": "Suscribir",
-    "great": "¡Excelente! Tendremos noticias nuestras muy pronto."
+    "great": "¡Excelente! Tendrás noticias de Sprout muy pronto"
   }
 }
 </i18n>
