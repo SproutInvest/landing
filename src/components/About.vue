@@ -104,20 +104,20 @@
   },
   "es": {
     "h1": "Aprende Finanzas Personales",
-    "t1": "Con Sprout, tendrás la oportunidad de aprender desde lo más básico hasta lo más avanzado del mundo de las Finanzas",
-    "l11": "Camino claro de aprendizaje financiero",
-    "l12": "Pon el aprendizaje en práctica y empieza a hacer crecer tu dinero",
-    "l13": "Te aconsejamos para que uses mejor tu Dinero a un precio accesible",
+    "t1": "Con Sprout, tendrás la oportunidad de aprender desde lo más básico, hasta lo más avanzado del mundo de las finanzas",
+    "l11": "Camino claro de aprendizaje, de cero a inversionista",
+    "l12": "Pon el aprendizaje en práctica y empieza a hacer mejor uso de tu dinero",
+    "l13": "Te aconsejamos para que uses mejor tu dinero a un precio accesible",
     "h2": "Define tus Metas de Inversión",
-    "t2": "En lugar de que tu dinero pierda valor en una cuenta bancaria, observa como día a día tu dinero crece con Sprout. Usamos la mejor tecnología para elegir la mejor inversión para ti",
-    "l21": "Planea tus metas de inversión con Spröut",
+    "t2": "Sprout es una herramienta para alcanzar todas tus metas, ya sea que busques retirarte cómodamente, o quieras comprar algo que tengas en mente.",
+    "l21": "Planea tus metas de inversión con Sprout",
     "l22": "Invierte automáticamente y sin darte cuenta",
-    "l23": "Crea retos de inversión con Familia y Amigos",
+    "l23": "Crea retos de inversión con familia y amigos",
     "h3": "Lleva un registro de tu Dinero",
-    "t3": "En lugar de que tu dinero pierda valor en una cuenta bancaria, ve como día a día tu dinero crece con Spröut. Usamos la mejor tecnología para elegir la mejor inversión para ti.",
+    "t3": "En lugar de que tu dinero pierda valor en una cuenta bancaria, observa como día a día tu dinero crece con Sprout. Usamos la mejor tecnología para elegir la mejor inversión para ti.",
     "l31": "Usamos la misma encriptación que tu Banco",
     "l32": "Fácil de depositar y retirar dinero",
-    "l33": "El precio más bajo para una cuenta de Inversión en México"
+    "l33": "El precio más bajo para una cuenta de inversión en México"
   }
 }
 </i18n>

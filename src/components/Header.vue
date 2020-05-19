@@ -59,8 +59,8 @@
     "contact": "Contact"
   },
   "es": {
-    "who": "¿Porque nosotros?",
-    "how": "¿Como funciona?",
+    "who": "¿Por qué nosotros?",
+    "how": "¿Cómo Funciona?",
     "start": "Empieza a invertir",
     "contact": "Contacto"
   }

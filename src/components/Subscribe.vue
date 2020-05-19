@@ -136,7 +136,7 @@ export default {
     border-bottom-left-radius: 0.25rem
     border-color: transparent
     background: rgba(255, 255, 255, 0.3)
-    color: $ss-font-color-white
+    color: $ss-font-color-black
     position: relative
     flex: 1 1 auto
     width: 1%

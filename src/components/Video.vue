@@ -35,7 +35,7 @@
     "how": "How Sprout Works"
   },
   "es": {
-    "how": "Cómo funciona Sprout"
+    "how": "¿Cómo funciona Sprout?"
   }
 }
 </i18n>
