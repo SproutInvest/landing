@@ -49,7 +49,7 @@
     "start": "Click Here"
   },
   "es": {
-    "header": "La plataforma para invertir fácil y rápido desde $200 pesos",
+    "header": "La plataforma que te ayuda a invertir fácil y rápido desde $200 pesos",
     "subHeader": "En Sprout creemos que todos deberían tener la oportunidad de ser financieramente independientes. Nuestro equipo de expertos está desarrollando Sprout para guiarte paso a paso en tus primeras inversiones.",
     "disclaimer": "* no compartiremos sus datos con terceros",
     "ctoa": "¿Estás interesado en hacer crecer tu dinero y enterarte de las últimas novedades de Sprout?",
