@@ -15,8 +15,11 @@
         <select v-model="plan">
           <option
             selected
-            value="saver"
+            value=""
           >
+            {{ $t('choice') }}
+          </option>
+          <option value="saver">
             Saver
           </option>
           <option value="smart_saver">
@@ -39,6 +42,10 @@
         placeholder="your@mail.com"
         aria-label="Subscribe"
       >
+      <!-- <font-awesome-icon
+        class="ss-lock"
+        icon="lock"
+      /> -->
       <div
         class="input-group-append"
       >
@@ -55,6 +62,7 @@
         </button>
       </div>
     </div>
+    <small>{{ $t('disclaimer') }}</small>
     <div
       v-show="submitted"
       class="ss-submitted-text"
@@ -70,13 +78,17 @@
     "fullName": "Full Name",
     "age": "Age",
     "subscribe": "Subscribe",
-    "great": "Great! You'll be hearing from us very soon."
+    "great": "Great! You'll be hearing from us very soon.",
+    "choice": "Product:",
+    "disclaimer": "* we won't share your data with third parties"
   },
   "es": {
     "fullName": "Nombre Completo",
     "age": "Años",
     "subscribe": "Suscribir",
-    "great": "¡Excelente! Tendrás noticias de Sprout muy pronto"
+    "great": "¡Excelente! Tendrás noticias de Sprout muy pronto",
+    "choice": "Producto:",
+    "disclaimer": "* no compartiremos sus datos con terceros"
   }
 }
 </i18n>
@@ -96,7 +108,7 @@ export default {
     return {
       email: null,
       name: null,
-      plan: 'saver',
+      plan: '',
       submitted: false,
       submitting: false,
     }
@@ -128,7 +140,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
-.ss-input-group
+.ss-input-group 
   .form-control
     border-top-right-radius: 0
     border-bottom-right-radius: 0
@@ -142,7 +154,7 @@ export default {
     width: 1%
     margin-bottom: 0.2rem
     display: block
-    height: calc(3.375rem + 2px)
+    height: calc(3.375rem + 2px)x
     padding: 0.9375rem 0.9375rem
       padding-right: 0.9375rem
       padding-left: 0.9375rem
@@ -181,7 +193,7 @@ export default {
   border-bottom-left-radius: 0.25rem
   border: 1px solid #e5e5e5
   background: rgba(255, 255, 255, 0.1)
-  color: $ss-font-color-white
+  color: $ss-font-color-black
   height: calc(3.375rem + 2px)
   padding: 0.9375rem 0.9375rem
   width: 100%

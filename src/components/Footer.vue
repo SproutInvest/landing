@@ -1,12 +1,30 @@
 <template>
-  <div>
-    <div
-      id="footer"
-      class="ss-footer py-5 text-center"
-    >
-      <p>{{ $t('at') }} <a href="mailto:contact@sproutinvest.io">contact@sproutinvest.io</a>  | © 2020 Sprout Invest</p>
+  <div
+    id="footer"
+    class="ss-footer py-5 text-center"
+  >
+    <div class="ss-social-sharing">
+      <a
+        href="https://www.facebook.com/sproutinvst/"
+        target="_blank"
+      >
+        <font-awesome-icon :icon="['fab', 'facebook-square']" />
+      </a>
+      <a
+        href="https://www.instagram.com/sproutinvst/"
+        target="_blank"
+      >
+        <font-awesome-icon :icon="['fab', 'instagram-square']" />
+      </a>
+      <a
+        href="https://twitter.com/invest_sprout"
+        target="_blank"
+      >
+        <font-awesome-icon :icon="['fab', 'twitter-square']" />
+      </a>
     </div>
-  </div>  
+    <p>{{ $t('at') }} <a href="mailto:contact@sproutinvest.io">contact@sproutinvest.io</a>  | © 2020 Sprout Invest</p>
+  </div> 
 </template>
 
 <i18n>
@@ -35,4 +53,9 @@ export default {
   a
     color: $ss-font-color-white
     text-decoration: underline solid $ss-font-color-white
+.ss-social-sharing
+  margin-bottom: 1rem
+  a
+    font-size: 2.5rem
+    margin-right: 1rem
 </style>
