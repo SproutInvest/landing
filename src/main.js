@@ -13,6 +13,7 @@ import 'video.js/dist/video-js.css'
 
 import App from './App.vue'
 import i18n from './i18n'
+import router from './router'
 
 library.add(faSpinner)
 library.add(faLock)
@@ -36,5 +37,6 @@ Vue.use(VueVideoPlayer)
 
 new Vue({
   i18n,
+  router,
   render: h => h(App),
 }).$mount('#app')
