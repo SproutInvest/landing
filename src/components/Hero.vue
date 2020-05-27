@@ -94,7 +94,7 @@ export default {
 h1
   font-size: 2.25rem
 h3
-  font-size: 1rem
+  font-size: 1.15rem
   // text-align: justify
 h4
   font-size: 0.9rem
