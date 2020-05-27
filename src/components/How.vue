@@ -1,12 +1,12 @@
 <template>
   <div
-    id="about"
+    id="how"
     class="ss-about"
   >
     <div class="container">
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
-          <span class="ss-about-number">1</span>
+          <span class="ss-how-number">1</span>
           <h3 class="mb-5">
             {{ $t('h1') }}
           </h3>
@@ -18,7 +18,7 @@
           data-aos-delay="500"
         >
           <img
-            class="ss-about-image"
+            class="ss-how-image"
             src="../assets/about1.png"
             alt="Sprout About Image 1"
           >
@@ -36,7 +36,7 @@
           data-aos-delay="500"
         >
           <img
-            class="ss-about-image"
+            class="ss-how-image"
             src="../assets/about2.png"
             alt="Sprout About Image 2"
           >
@@ -47,7 +47,7 @@
           </ul>
         </div>
         <div class="col-12 col-lg-6 text-center text-lg-left">
-          <span class="ss-about-number">2</span>
+          <span class="ss-how-number">2</span>
           <h3 class="mb-5">
             {{ $t('h2') }}
           </h3>
@@ -56,7 +56,7 @@
       </div>
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-6 text-center text-lg-left">
-          <span class="ss-about-number">3</span>
+          <span class="ss-how-number">3</span>
           <h3 class="mb-5">
             {{ $t('h3') }}
           </h3>
@@ -68,7 +68,7 @@
           data-aos-delay="500"
         >
           <img
-            class="ss-about-image"
+            class="ss-how-image"
             src="../assets/about3.png"
             alt="Sprout About Image 3"
           >
@@ -124,7 +124,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'How',
   props: {},
 }
 </script>
@@ -136,7 +136,7 @@ h1
   font-family: $ss-font-family-special
   color: $ss-font-color-blue
   font-weight: 700
-.ss-about-number
+.ss-how-number
   font-size: 4rem
   font-family: $ss-font-family-special
   color: $ss-font-color-blue
@@ -160,7 +160,7 @@ p
   font-size: 1.15rem
   font-family: $ss-font-family-special
   color: $ss-font-color-blue
-.ss-about-image
+.ss-how-image
   width: 50%
   margin: 0 auto
 </style>

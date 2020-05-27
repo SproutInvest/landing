@@ -6,7 +6,7 @@
       variant="faded"
     >
       <div class="container">
-        <b-navbar-brand href="#">
+        <b-navbar-brand href="/">
           <img
             src="../assets/logo.png"
             height="60"
@@ -22,13 +22,25 @@
           is-nav
         >
           <b-navbar-nav class="ml-auto">
-            <b-nav-item
-              href="/"
+            <!-- <b-nav-item
+              href="#/about"
               class="ss-header-link"
             >
               {{ $t('who') }}
-            </b-nav-item>
+            </b-nav-item> -->
+            <!-- <b-nav-item
+              href="#/risk_profile"
+              class="ss-header-link"
+            >
+              {{ $t('profile') }}
+            </b-nav-item> -->
             <b-nav-item
+              href="#/blog"
+              class="ss-header-link"
+            >
+              {{ $t('learn') }}
+            </b-nav-item>
+            <!-- <b-nav-item
               href="#about"
               class="ss-header-link"
             >
@@ -39,7 +51,7 @@
               class="ss-header-link"
             >
               {{ $t('start') }}
-            </b-nav-item>
+            </b-nav-item> -->
             <b-nav-item href="">
               <LanguageSwitcher />
             </b-nav-item>
@@ -54,12 +66,16 @@
 {
   "en": {
     "who": "Who are we?",
+    "learn": "Check your risk profile",
+    "learn": "Learn about investing",
     "how": "How does it work?",
     "start": "Start investing",
     "contact": "Contact"
   },
   "es": {
     "who": "¿Por qué nosotros?",
+    "profile": "Check your risk profile",
+    "learn": "Learn about investing",
     "how": "¿Cómo Funciona?",
     "start": "Empieza a invertir",
     "contact": "Contacto"

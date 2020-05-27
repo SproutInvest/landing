@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 import Home from '@/pages/Home'
 import About from '@/pages/About'
+import Blog from '@/pages/Blog'
+import BlogPost from '@/pages/BlogPost'
 
 Vue.use(Router)
 
@@ -17,6 +19,16 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About,
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: Blog,
+    },
+    {
+      path: '/blog/:id',
+      name: 'BlogPost',
+      component: BlogPost,
     },
   ],
 })
