@@ -17,7 +17,7 @@
           </h4>
           <a
             href="#footer"
-            class="btn"
+            class="btn mt-2"
             @click.capture="onCtoaClick"
           >{{ $t('start') }}</a>
         </div>

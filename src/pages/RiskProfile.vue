@@ -1,11 +1,5 @@
 <template>
   <div class="container">
-    <img
-      src="../assets/logo.png"
-      height="60"
-      width="150"
-      alt="Sprout_Logo"
-    >
     <div>
       <h1 class="mb-2">
         {{ $t('title') }}
@@ -24,7 +18,8 @@
     >
       <b-form-group
         id="input-group-1"
-        label="Email address:"
+        class="ss-text"
+        :label="$t('enterEmail')"
         label-for="input-1"
         description="No compartiremos sus datos con terceros"
       >
@@ -38,6 +33,7 @@
       </b-form-group>
       <b-form-group
         id="input-group-2"
+        class="ss-text"
         label="Nombre (s):"
         label-for="input-2"
       >
@@ -50,6 +46,7 @@
       </b-form-group>
       <b-form-group
         id="input-group-3"
+        class="ss-text"
         label="Fecha de Nacimiento:"
         label-for="input-3"
       >
@@ -59,7 +56,10 @@
           class="mb-2"
         />
       </b-form-group>
-      <b-form-group label="¿A qué te dedicas?">
+      <b-form-group 
+        label="¿A qué te dedicas?"
+        class="ss-select"
+      >
         <b-form-select
           v-model="form.job"
           :options="jobOptions"
@@ -67,7 +67,10 @@
           disabled-field="notEnabled"
         />
       </b-form-group>
-      <b-form-group label="¿Cuál es tu último grado de Estudios?">
+      <b-form-group
+        label="¿Cuál es tu último grado de Estudios?"
+        class="ss-select"
+      >
         <b-form-select
           v-model="form.education"
           :options="educationOptions"
@@ -199,25 +202,29 @@
 {
   "en": {
     "title": "Investor Profile",
-    "subHeader1":"Platícanos un poco sobre tí y tus necesidades como inversionista. Sabemos que algunas preguntas pueden ser de carácter sensible, personales o privadas, no obstante son necesarias para que hagamos nuestro trabajo lo mejor posible y te hagamos un plan de inversión a tu medida.",
+    "subHeader1":"Test",
     "subHeader2":"También te prometemos que toda la información se maneja con las más estrictas medidas de seguridad y que tu información es confidencial con nosotros.",
-    "fullName": "Full Name"
+    "fullName": "Full Name",
+    "enterEmail": "Enter Email ID"
   },
   "es": {
     "title": "Investor Profile",
     "subHeader1":"Platícanos un poco sobre tí y tus necesidades como inversionista. Sabemos que algunas preguntas pueden ser de carácter sensible, personales o privadas, no obstante son necesarias para que hagamos nuestro trabajo lo mejor posible y te hagamos un plan de inversión a tu medida.",
     "subHeader2":"También te prometemos que toda la información se maneja con las más estrictas medidas de seguridad y que tu información es confidencial con nosotros.",
-    "fullName": "Full Name"
+    "fullName": "Full Name",
+    "enterEmail": "Espanol"
   }
 }
 </i18n>
 
 <script>
+const jobLanguageOptions= require('./riskProfileOptions.json')['jobLanguageOptions']
 export default {
   name: 'RiskProfile',
   components: {},
-  data() {
+  data: function() {
     return {
+      locale: 'es',
       form: {
         email: '',
         name: '',
@@ -236,14 +243,7 @@ export default {
         lifestyle: '',
         purchase: '',
       },
-      jobOptions:[
-        { value: null, text: '-- Please select an option --' },
-        { value: 'Estudiante', text: 'Soy Estudiante' },
-        { value: 'Profesionista', text: 'Soy Profesionista' },
-        { value: 'Empresario', text: 'Soy Empresario' },
-        { value: 'Freelancer', text: 'Soy Freelancer'},
-        { value: 'Other', text: 'Other'},
-      ],
+      jobOptions: jobLanguageOptions[this.locale],
       educationOptions:[
         { value: null, text: '-- Please select an option --' },
         { value: 'Escuela Primaria', text: 'Escuela Primaria' },
@@ -315,6 +315,7 @@ export default {
   },
   mounted() {
     this.$ga.page('/risk_profile')
+    this.jobOptions = jobLanguageOptions[this.locale]
   },
   methods: {
     onSubmit(evt) {
@@ -350,12 +351,16 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+.container
+  max-width: 800px !important
 h1
   font-size: 2.25rem
   text-align: center
 h3
   font-size: 1rem
-.form-control
-  width: 20%
+.ss-select
+  width: 75%
+.ss-text
+  width: 75%
 </style>

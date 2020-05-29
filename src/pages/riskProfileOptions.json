@@ -1,0 +1,20 @@
+{
+  "jobLanguageOptions": {
+    "en":[
+      { "value": null, "text": "-- English --" },
+      { "value": "Estudiante", "text": "Soy Estudiante" },
+      { "value": "Profesionista", "text": "Soy Profesionista" },
+      { "value": "Empresario", "text": "Soy Empresario" },
+      { "value": "Freelancer", "text": "Soy Freelancer"},
+      { "value": "Other", "text": "Other"}
+    ],
+    "es":[
+      { "value": null, "text": "-- Please select an option --" },
+      { "value": "Estudiante", "text": "Soy Estudiante" },
+      { "value": "Profesionista", "text": "Soy Profesionista" },
+      { "value": "Empresario", "text": "Soy Empresario" },
+      { "value": "Freelancer", "text": "Soy Freelancer"},
+      { "value": "Other", "text": "Other"}
+    ]
+  }
+}

@@ -4,6 +4,7 @@
       <div class="row align-items-center justify-content-between py-5 py-md-10">
         <div class="col-12 col-lg-9 text-center text-lg-left">
           <div class="ss-demo-section py-5">
+            <h3>{{ $t('chartTitle') }}</h3>
             <div id="chart">
               <apexchart
                 type="area"
@@ -74,14 +75,16 @@
     "deposit": "Monthly Deposit Amount",
     "term": "Investment Term",
     "years": "years",
-    "disclaimer": "*assuming risk-free rate of 6%"
+    "disclaimer": "*assuming risk-free rate of 6%",
+    "chartTitle": "English Title"
   },
   "es": {
     "initial": "Monto de Inversión Inicial",
     "deposit": "Monto de Depósito Mensual",
     "term": "Plazo de Inversión",
     "years": "años",
-    "disclaimer": "*Tasa Libre de Riesgo 6%"
+    "disclaimer": "*Tasa Libre de Riesgo 6%",
+    "chartTitle": "Spanish Title"
   }
 }
 </i18n>
