@@ -22,7 +22,6 @@ export default new Router({
       component: About,
     },
     {
-<<<<<<< Updated upstream
       path: '/blog',
       name: 'Blog',
       component: Blog,
@@ -31,11 +30,11 @@ export default new Router({
       path: '/blog/:id',
       name: 'BlogPost',
       component: BlogPost,
-=======
+    },
+    {
       path: '/risk_profile',
       name: 'RiskProfile',
       component: RiskProfile,
->>>>>>> Stashed changes
     },
   ],
 })
