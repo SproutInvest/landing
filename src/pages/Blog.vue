@@ -34,7 +34,7 @@ export default {
   },
   mounted() {
     this.$ga.page('/blog')
-    this.posts = require('./blogPosts.json')['posts']['en']
+    this.posts = require('./blogPosts.json')['posts']['es']
   },
 }
 </script>

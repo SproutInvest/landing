@@ -233,6 +233,7 @@
         <b-form-group :label="$t('mortgageYearsLabel')">
           <b-form-input
             v-model="form.mortgageYears"
+            required
             placeholder="10"
           />
         </b-form-group>
@@ -254,11 +255,50 @@
             placeholder="25000"
           />
         </b-form-group>
-        <b-form-group :label="$t('investmentLabel')">
+        <b-form-group :label="$t('companySharesLabel')">
           <b-form-radio-group
-            v-model="form.investment"
+            v-model="form.companyShares"
             :options="yesNoOther"
             class="mb-3"
+            required
+            disabled-field="notEnabled"
+          />
+        </b-form-group>
+        <b-form-group
+          :label="$t('incomeLabel')"
+          :description="$t('incomeDescription')"
+        >
+          <b-form-input
+            v-model="form.income"
+            required
+            placeholder="25000"
+          />
+        </b-form-group>
+        <b-form-group :label="$t('debtLabel')">
+          <b-form-radio-group
+            v-model="form.debt"
+            :options="yesNo"
+            class="mb-3"
+            required
+            disabled-field="notEnabled"
+          />
+        </b-form-group>
+        <b-form-group
+          :label="$t('debtPaymentLabel')"
+          :description="$t('debtPaymentDescription')"
+        >
+          <b-form-input
+            v-model="form.debtPayment"
+            required
+            placeholder="0"
+          />
+        </b-form-group>
+        <b-form-group :label="$t('sourceLabel')">
+          <b-form-radio-group
+            v-model="form.source"
+            :options="sourceOptions"
+            class="mb-3"
+            required
             disabled-field="notEnabled"
           />
         </b-form-group>
@@ -316,7 +356,14 @@
     "mortgageYearsLabel": "How long is the duration (in years) of your mortgage? (*If you don't have a mortgage answer '0')",
     "investmentLabel": "Do you currently have Savings or Investments?",
     "investmentAmountLabel": "Could you indicate the approximate amount of your Savings or Investment (MXN)?",
-    "investmentAmountDescription": "Enter the approximate amount of your savings in Mexican pesos. If you're just going to start as an investor, enter 0"
+    "investmentAmountDescription": "Enter the approximate amount of your savings in Mexican pesos. If you're just going to start as an investor, enter 0",
+    "companySharesLabel": "Do you have shares or investments related to the Company where you work?",
+    "incomeLabel": "What is your Approximate Monthly Income?",
+    "incomeDescription": "Enter the approximate amount of your monthly income (e.g. 25000).",
+    "debtLabel": "At the moment, do you have any debt other than a Mortgage? (e.g. car in lease or credit, credit card, etc.)",
+    "debtPaymentLabel": "Could you give us a rough estimate of how much you need to pay off your debts?",
+    "debtPaymentDescription": "Enter the approximate amount of your debt (e.g. 250000) if you don't have debts currently please enter 0",
+    "sourceLabel": "In case you have any savings or investments currently, how did you generate these investments?"
   },
   "es": {
     "title": "Investor Profile",
@@ -352,7 +399,14 @@
     "mortgageYearsLabel": "¿A qué plazo en años contrataste tu hipoteca? (*Si no tienes hipoteca contesta '0')",
     "investmentLabel": "Tienes Ahorros o Inversiones actualmente?",
     "investmentAmountLabel": "Podrías Indicar el monto aproximado de tu Ahorro o Inversión (MXN)?",
-    "investmentAmountDescription": "Ingresa el monto aproximado de tus ahorros en pesos mexicanos (25000). Si apenas vas a empezar como inversionista ingresa 0"
+    "investmentAmountDescription": "Ingresa el monto aproximado de tus ahorros en pesos mexicanos (25000). Si apenas vas a empezar como inversionista ingresa 0",
+    "companySharesLabel": "¿Tienes acciones o inversiones relacionadas a la Empresa en donde trabajas?",
+    "incomeLabel": "¿Cuál es tu Ingreso Mensual Aproximado?",
+    "incomeDescription": "Ingresa el monto aproximado de tus ingresos mensuales (Ej. 25000).",
+    "debtLabel": "¿Por el momento, Tienes alguna deuda que no sea una Hipoteca? (Ej. coche en arrendamiento o a crédito, tarjeta de crédito, etc)",
+    "debtPaymentLabel": "¿Nos podrías dar un aproximado de cuanto te falta pagar de tus deudas?",
+    "debtPaymentDescription": "Ingresa el monto aproximado de tu deuda (Ej. 250000) si no tienes deudas actualmente escribe 0",
+    "sourceLabel": "¿En caso de que tengas ahorros o inversiones actualmente, como generaste estos recursos?"
   }
 }
 </i18n>
@@ -371,12 +425,13 @@ const lifestyleLanguageOptions= require('./riskProfileOptions.json')['lifestyleL
 const purchaseLanguageOptions= require('./riskProfileOptions.json')['purchaseLanguageOptions']
 const housingLanguageOptions= require('./riskProfileOptions.json')['housingLanguageOptions']
 const yesNoOtherLanguage= require('./riskProfileOptions.json')['yesNoOtherLanguage']
+const sourceOptionsLanguage= require('./riskProfileOptions.json')['sourceOptionsLanguage']
 export default {
   name: 'RiskProfile',
   components: {},
   data: function() {
     return {
-      locale: 'es',
+      locale: 'en',
       form: {
         email: '',
         name: '',
@@ -400,6 +455,11 @@ export default {
         mortgageYears: '',
         investment: '',
         investmentAmount: '',
+        companyShares: '',
+        income: '',
+        debt: '',
+        debtPayment: '',
+        source: '',
       },
       jobOptions: jobLanguageOptions[this.locale],
       educationOptions: educationLanguageOptions[this.locale],
@@ -414,6 +474,7 @@ export default {
       purchaseOptions: purchaseLanguageOptions[this.locale],
       housingOptions: housingLanguageOptions[this.locale],
       yesNoOther: yesNoOtherLanguage[this.locale],
+      sourceOptions: sourceOptionsLanguage[this.locale],
       show: true,
     }
   },
@@ -463,6 +524,11 @@ export default {
       this.form.mortgageYears = '',
       this.form.investment = '',
       this.form.investmentAmount = '',
+      this.form.companyShares = '',
+      this.form.income = '',
+      this.form.debt = '',
+      this.form.debtPayment = '',
+      this.form.source = '',
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {

@@ -194,5 +194,21 @@
       { "value": "no", "text": "No" },
       { "value": "other", "text": "Other" }
     ]
+  },
+  "sourceOptionsLanguage": {
+    "en":[
+      { "value": "yes", "text": "Yes" },
+      { "value": "no", "text": "No" },
+      { "value": "other", "text": "Other" }
+    ],
+    "es":[
+      { "value": "yes", "text": "Del Ahorro de mis Ingresos" },
+      { "value": "no", "text": "De una Herencia" },
+      { "value": "no", "text": "De un Regalo" },
+      { "value": "no", "text": "De una Lotería" },
+      { "value": "no", "text": "Vendí mi Casa" },
+      { "value": "no", "text": "Tomé un Préstamo" },
+      { "value": "other", "text": "Other" }
+    ]
   }
 }

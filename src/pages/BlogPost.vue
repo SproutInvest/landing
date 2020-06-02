@@ -32,7 +32,7 @@ export default {
   mounted() {
     const id = this.$route.params.id
     this.$ga.page(`/blog/${ id }`)
-    const posts = require('./blogPosts.json')['posts']['en']
+    const posts = require('./blogPosts.json')['posts']['es']
     this.post = posts.filter(p => p.id == id)[0]
   },
 }
