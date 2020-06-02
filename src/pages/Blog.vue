@@ -20,6 +20,7 @@
         </div>
       </div>
     </div>
+    <Ctoa />
   </div>
 </template>
 
@@ -35,9 +36,11 @@
 </i18n>
 
 <script>
+import Ctoa from '../components/Ctoa.vue'
+
 export default {
   name: 'Blog',
-  components: {},
+  components: {Ctoa},
   data() {
     return {
       locale: null,

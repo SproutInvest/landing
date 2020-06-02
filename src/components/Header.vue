@@ -22,6 +22,12 @@
           is-nav
         >
           <b-navbar-nav class="ml-auto">
+            <b-nav-item
+              href="/"
+              class="ss-header-link"
+            >
+              {{ $t('home') }}
+            </b-nav-item>
             <!-- <b-nav-item
               href="#/about"
               class="ss-header-link"
@@ -45,13 +51,13 @@
               class="ss-header-link"
             >
               {{ $t('how') }}
-            </b-nav-item>
+            </b-nav-item> -->
             <b-nav-item
               href="#footer"
               class="ss-header-link"
             >
               {{ $t('start') }}
-            </b-nav-item> -->
+            </b-nav-item>
             <b-nav-item href="">
               <LanguageSwitcher />
             </b-nav-item>
@@ -65,16 +71,18 @@
 <i18n>
 {
   "en": {
+    "home": "Home",
     "who": "Who are we?",
-    "learn": "Check your risk profile",
+    "profile": "Check your risk profile",
     "learn": "Learn about investing",
     "how": "How does it work?",
     "start": "Start investing",
     "contact": "Contact"
   },
   "es": {
+    "home": "Home",
     "who": "¿Por qué nosotros?",
-    "profile": "Check your risk profile",
+    "profile": "Check your Investor Profile",
     "learn": "Aprende a invertir",
     "how": "¿Cómo Funciona?",
     "start": "Empieza a invertir",
