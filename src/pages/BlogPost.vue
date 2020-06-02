@@ -14,6 +14,7 @@
         </div>
       </div>
     </div>
+    <Ctoa />
   </div>
 </template>
 
@@ -30,9 +31,11 @@
 
 
 <script>
+import Ctoa from '../components/Ctoa.vue'
+
 export default {
   name: 'BlogPost',
-  components: {},
+  components: {Ctoa},
   data() {
     return {
       post: {
