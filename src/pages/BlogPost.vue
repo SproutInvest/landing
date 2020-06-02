@@ -41,11 +41,20 @@ export default {
       },
     }
   },
-  mounted() {
+  mounted () {
     const id = this.$route.params.id
     this.$ga.page(`/blog/${ id }`)
-    const posts = require('./blogPosts.json')['posts']['es']
-    this.post = posts.filter(p => p.id == id)[0]
+    this.localeInterval = setInterval(function () {
+      const locale = localStorage.getItem('locale')
+      if (locale !== this.locale) {
+        this.locale = locale
+        const posts = require('./blogPosts.json')['posts'][locale]
+        this.post = posts.filter(p => p.id == id)[0]
+      }
+    }.bind(this), 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.localeInterval)
   },
 }
 </script>
