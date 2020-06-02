@@ -40,12 +40,22 @@ export default {
   components: {},
   data() {
     return {
+      locale: null,
       posts: [],
     }
   },
-  mounted() {
+  mounted () {
     this.$ga.page('/blog')
-    this.posts = require('./blogPosts.json')['posts']['es']
+    this.localeInterval = setInterval(function () {
+      const locale = localStorage.getItem('locale')
+      if (locale !== this.locale) {
+        this.locale = locale
+        this.posts = require('./blogPosts.json')['posts'][locale]
+      }
+    }.bind(this), 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.localeInterval)
   },
 }
 </script>

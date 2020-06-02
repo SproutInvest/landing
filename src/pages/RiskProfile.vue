@@ -479,22 +479,31 @@ export default {
       show: true,
     }
   },
-  mounted() {
+  mounted () {
     this.$ga.page('/risk_profile')
-    this.jobOptions = jobLanguageOptions[this.locale]
-    this.educationOptions = educationLanguageOptions[this.locale]
-    this.yesNo = yesNoLanguage[this.locale]
-    this.objectiveOptions = objectiveLanguageOptions[this.locale]
-    this.horizonOptions = horizonLanguageOptions[this.locale]
-    this.returnOptions = returnLanguageOptions[this.locale]
-    this.riskReturnOptions = riskReturnLanguageOptions[this.locale]
-    this.lossOptions = lossLanguageOptions[this.locale]
-    this.riskOptions = riskLanguageOptions[this.locale]
-    this.lifestyleOptions = lifestyleLanguageOptions[this.locale]
-    this.purchaseOptions = purchaseLanguageOptions[this.locale]
-    this.housingOptions = housingLanguageOptions[this.locale]
-    this.yesNoOther = yesNoOtherLanguage[this.locale]
-    this.sourceOptions = sourceLanguageOptions[this.locale]
+    this.localeInterval = setInterval(function () {
+      const locale = localStorage.getItem('locale')
+      if (locale !== this.locale) {
+        this.locale = locale
+        this.jobOptions = jobLanguageOptions[locale]
+        this.educationOptions = educationLanguageOptions[locale]
+        this.yesNo = yesNoLanguage[locale]
+        this.objectiveOptions = objectiveLanguageOptions[locale]
+        this.horizonOptions = horizonLanguageOptions[locale]
+        this.returnOptions = returnLanguageOptions[locale]
+        this.riskReturnOptions = riskReturnLanguageOptions[locale]
+        this.lossOptions = lossLanguageOptions[locale]
+        this.riskOptions = riskLanguageOptions[locale]
+        this.lifestyleOptions = lifestyleLanguageOptions[locale]
+        this.purchaseOptions = purchaseLanguageOptions[locale]
+        this.housingOptions = housingLanguageOptions[locale]
+        this.yesNoOther = yesNoOtherLanguage[locale]
+        this.sourceOptions = sourceLanguageOptions[locale]
+      }
+    }.bind(this), 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.localeInterval)
   },
   methods: {
     onSubmit(evt) {

@@ -136,6 +136,7 @@ export default {
   data: function() {
     const ga = this.$ga
     return {
+      localeInterval: null,
       locale: 'en',
       initialAmount: 10000,
       monthlyDeposit: 1000,
@@ -211,11 +212,16 @@ export default {
     }
   },
   mounted () {
-    const locale = localStorage.getItem('locale')
-    if (locale) {
-      this.locale = locale
-      this.updateChart(false)
-    }
+    this.localeInterval = setInterval(function () {
+      const locale = localStorage.getItem('locale')
+      if (locale !== this.locale) {
+        this.locale = locale
+        this.updateChart(false)
+      }
+    }.bind(this), 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.localeInterval)
   },
   methods: {
     updateChart: function (sendEventToGa = true) {
