@@ -1,20 +1,198 @@
 {
   "jobLanguageOptions": {
     "en":[
-      { "value": null, "text": "-- English --" },
-      { "value": "Estudiante", "text": "Soy Estudiante" },
-      { "value": "Profesionista", "text": "Soy Profesionista" },
-      { "value": "Empresario", "text": "Soy Empresario" },
-      { "value": "Freelancer", "text": "Soy Freelancer"},
+      { "value": null, "text": "-- Please select an option --" },
+      { "value": "Student", "text": "Student" },
+      { "value": "Professional", "text": "Professional" },
+      { "value": "Entrepreneur", "text": "Entrepreneur" },
+      { "value": "Freelancer", "text": "Freelancer"},
       { "value": "Other", "text": "Other"}
     ],
     "es":[
-      { "value": null, "text": "-- Please select an option --" },
-      { "value": "Estudiante", "text": "Soy Estudiante" },
-      { "value": "Profesionista", "text": "Soy Profesionista" },
-      { "value": "Empresario", "text": "Soy Empresario" },
+      { "value": null, "text": "-- Por favor seleccione una opción --" },
+      { "value": "Student", "text": "Soy Estudiante" },
+      { "value": "Professional", "text": "Soy Profesionista" },
+      { "value": "Entrepreneur", "text": "Soy Empresario" },
       { "value": "Freelancer", "text": "Soy Freelancer"},
       { "value": "Other", "text": "Other"}
+    ]
+  },
+  "educationLanguageOptions": {
+    "en":[
+      { "value": null, "text": "-- Please select an option --" },
+      { "value": "Primary School", "text": "Primary School" },
+      { "value": "Secondary School", "text": "Secondary School" },
+      { "value": "High School", "text": "High School" },
+      { "value": "Bachelors", "text": "Bachelor's degree"},
+      { "value": "Postgraduate", "text": "Postgraduate"},
+      { "value": "Masters", "text": "Master's Degree"},
+      { "value": "Doctorate", "text": "Doctorate"},
+      { "value": "Other", "text": "Other"}
+    ],
+    "es":[
+      { "value": null, "text": "-- Por favor seleccione una opción --" },
+      { "value": "Primary School", "text": "Escuela Primaria" },
+      { "value": "Secondary School", "text": "Escuela Secundaria" },
+      { "value": "High School", "text": "Escuela Preparatoria o Bachillerato" },
+      { "value": "Bachelors", "text": "Licenciatura"},
+      { "value": "Postgraduate", "text": "Posgrado o Especialidad"},
+      { "value": "Masters", "text": "Maestría"},
+      { "value": "Doctorate", "text": "Doctorado"},
+      { "value": "Other", "text": "Other"}
+    ]
+  },
+  "yesNoLanguage": {
+    "en":[
+      { "value": "Yes", "text": "Yes" },
+      { "value": "No", "text": "No" }
+    ],
+    "es":[
+      { "value": "Yes", "text": "Sí" },
+      { "value": "No", "text": "No" }
+    ]
+  },
+  "objectiveLanguageOptions": {
+    "en":[
+      { "value": "takeAdvantage", "text": "I want to take advantage of investment opportunities" },
+      { "value": "achieveGoals", "text": "I want to save to meet short and medium term goals (Buy a car or a house)" },
+      { "value": "retirement", "text": "I want to save to be better prepared for retirement" },
+      { "value": "inflation", "text": "I want to protect my money from inflation and receive additional income"},
+      { "value": "protect", "text": "I want to protect the value of my money over everything else"}
+    ],
+    "es":[
+      { "value": "takeAdvantage", "text": "Quiero aprovechar las oportunidades de inversión" },
+      { "value": "achieveGoals", "text": "Quiero ahorrar para cumplir metas de corto y mediano plazo (Comprar un coche o una casa)" },
+      { "value": "retirement", "text": "Quiero ahorrar para estar mejor preparad@ para el retiro" },
+      { "value": "inflation", "text": "Quiero proteger mi Dinero de la Inflación y Recibir Ingresos Adicionales"},
+      { "value": "protect", "text": "Quiero Proteger el valor de mi dinero sobre todo lo demás"}
+    ]
+  },
+  "horizonLanguageOptions": {
+    "en":[
+      { "value": "less6months", "text": "Less than 6 months" },
+      { "value": "6months1year", "text": "Between 6 months to 1 year" },
+      { "value": "1to5years", "text": "Between 1 to 5 years" },
+      { "value": "5to10years", "text": "Between 5 to 10 years"},
+      { "value": "more10years", "text": "More than 10 years"}
+    ],
+    "es":[
+      { "value": "less6months", "text": "Menos de 6 meses" },
+      { "value": "6months1year", "text": "Entre 6 mes y un año" },
+      { "value": "1to5years", "text": "Entre 1 y 5 años" },
+      { "value": "5to10years", "text": "Entre 5 y 10 años"},
+      { "value": "more10years", "text": "Más de 10 años"}
+    ]
+  },
+  "returnLanguageOptions": {
+    "en":[
+      {"value": "less3.5", "text": "Less than 3.5% annually" },
+      {"value": "3.5to4.5", "text": "Between 3.5% to 4.5% annually" },
+      {"value": "4.5to5.5", "text": "Between 4.5% to 5.5% annually" },
+      {"value": "5.5to7.0", "text": "Between 5.5% to 7.0% annually"},
+      {"value": "more7", "text": "More than 7.0% annually"}
+    ],
+    "es":[
+      {"value": "less3.5", "text": "Menos de 3.5% anual" },
+      {"value": "3.5to4.5", "text": "de 3.5% a 4.5% anual" },
+      {"value": "4.5to5.5", "text": "de 4.5% a 5.5% anual" },
+      {"value": "5.5to7.0", "text": "de 5.5% a 7.0% anual"},
+      {"value": "more7", "text": "Mayor a 7.0% anual"}
+    ]
+  },
+  "riskReturnLanguageOptions": {
+    "en":[
+      { "value": "gain4loss0", "text": "Possibility of a Gain of +4% and Loss of 0%" },
+      { "value": "gain7loss3", "text": "Possibility of a Gain of +7% and Loss of -3%" },
+      { "value": "gain15loss8", "text": "Possibility of a Gain of 15% and Loss of -8%" }
+    ],
+    "es":[
+      { "value": "gain4loss0", "text": "Posibilidad de Ganar +4% y Perder -0%" },
+      { "value": "gain7loss3", "text": "Posibilidad de Ganar +7% y Perder -3%" },
+      { "value": "gain15loss8", "text": "Posibilidad de Ganar +15% y Perder -8%" }
+    ]
+  },
+  "lossLanguageOptions": {
+    "en":[
+      { "value": "sellAll", "text": "Sell Everything" },
+      { "value": "sellLoss", "text": "Vendo lo que más perdió" },
+      { "value": "hold", "text": "Mantengo mi Posición" },
+      { "value": "buy", "text": "Compro más" }
+    ],
+    "es":[
+      { "value": "sellAll", "text": "Vendo todo" },
+      { "value": "sellLoss", "text": "Vendo lo que más perdió" },
+      { "value": "hold", "text": "Mantengo mi Posición" },
+      { "value": "buy", "text": "Compro más" }
+    ]
+  },
+  "riskLanguageOptions": {
+    "en":[
+      { "value": "own", "text": "Definitivamente tener un Negocio Propio" },
+      { "value": "maybeOwn", "text": "Tal vez tener un Negocio Propio" },
+      { "value": "neutral", "text": "No sé" },
+      { "value": "maybeWork", "text": "Tal Vez Trabajar para alguien más" },
+      { "value": "work", "text": "Definitivamente trabajar para alguien más" }
+    ],
+    "es":[
+      { "value": "own", "text": "Definitivamente tener un Negocio Propio" },
+      { "value": "maybeOwn", "text": "Tal vez tener un Negocio Propio" },
+      { "value": "neutral", "text": "No sé" },
+      { "value": "maybeWork", "text": "Tal Vez Trabajar para alguien más" },
+      { "value": "work", "text": "Definitivamente trabajar para alguien más" }
+    ]
+  },
+  "lifestyleLanguageOptions": {
+    "en":[
+      { "value": "less1month", "text": "Menos de 1 mes" },
+      { "value": "1to3month", "text": "Entre 1 mes y 3 meses" },
+      { "value": "3to6month", "text": "Entre 3 meses y 6 meses" },
+      { "value": "6to12month", "text": "Entre 6 meses y 1 año" },
+      { "value": "more12month", "text": "Más de 1 año" }
+    ],
+    "es":[
+      { "value": "less1month", "text": "Menos de 1 mes" },
+      { "value": "1to3month", "text": "Entre 1 mes y 3 meses" },
+      { "value": "3to6month", "text": "Entre 3 meses y 6 meses" },
+      { "value": "6to12month", "text": "Entre 6 meses y 1 año" },
+      { "value": "more12month", "text": "Más de 1 año" }
+    ]
+  },
+  "purchaseLanguageOptions": {
+    "en":[
+      { "value": "yes", "text": "Sí" },
+      { "value": "no", "text": "No" },
+      { "value": "maybe", "text": "Tal vez" }
+    ],
+    "es":[
+      { "value": "yes", "text": "Sí" },
+      { "value": "no", "text": "No" },
+      { "value": "maybe", "text": "Tal vez" }
+    ]
+  },
+  "housingLanguageOptions": {
+    "en":[
+      { "value": "rent", "text": "Rent" },
+      { "value": "own", "text": "Own House" },
+      { "value": "ownMortgage", "text": "Own House with Mortgage" },
+      { "value": "other", "text": "Other" }
+    ],
+    "es":[
+      { "value": "rent", "text": "Rento" },
+      { "value": "own", "text": "Casa Propia" },
+      { "value": "ownMortgage", "text": "Casa Propia con Hipoteca" },
+      { "value": "other", "text": "Other" }
+    ]
+  },
+  "yesNoOtherLanguage": {
+    "en":[
+      { "value": "yes", "text": "Yes" },
+      { "value": "no", "text": "No" },
+      { "value": "other", "text": "Other" }
+    ],
+    "es":[
+      { "value": "yes", "text": "Sí" },
+      { "value": "no", "text": "No" },
+      { "value": "other", "text": "Other" }
     ]
   }
 }

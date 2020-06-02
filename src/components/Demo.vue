@@ -26,7 +26,7 @@
               class="ss-demo-range"
               type="range"
               min="100"
-              max="30000"
+              max="100000"
               step="100"
               @change="updateChart"
             />
@@ -40,7 +40,7 @@
               class="ss-demo-range"
               type="range"
               min="100"
-              max="3000"
+              max="10000"
               step="100"
               @change="updateChart"
             />
@@ -75,16 +75,16 @@
     "deposit": "Monthly Deposit Amount",
     "term": "Investment Term",
     "years": "years",
-    "disclaimer": "*assuming risk-free rate of 6%",
-    "chartTitle": "English Title"
+    "disclaimer": "*Assuming savings bank account interest rate of 1%",
+    "chartTitle": "Visualize the potential of your investment"
   },
   "es": {
     "initial": "Monto de Inversión Inicial",
     "deposit": "Monto de Depósito Mensual",
     "term": "Plazo de Inversión",
     "years": "años",
-    "disclaimer": "*Tasa Libre de Riesgo 6%",
-    "chartTitle": "Spanish Title"
+    "disclaimer": "*Tasa de interés de la cuenta de ahorro del 1%",
+    "chartTitle": "Visualiza el potencial de tu inversión"
   }
 }
 </i18n>
@@ -92,7 +92,7 @@
 <script>
 import VueApexCharts from 'vue-apexcharts'
 
-const BANK_RATE = 0.02
+const BANK_RATE = 0.01
 const SPROUT_RATE = 0.09
 
 function generateSeries(initialAmount = 10000, monthlyDeposit = 1000, rate, investmentTerm = 10) {
@@ -172,7 +172,7 @@ export default {
             },
           },
         },
-        colors: ['#EFF0F3', '#B3EBDE'],
+        colors: ['#EFF0F3', '#88EAED'],
         dataLabels: {
           enabled: false,
         },
