@@ -47,7 +47,7 @@ export default {
   mounted () {
     this.$ga.page('/blog')
     this.localeInterval = setInterval(function () {
-      const locale = localStorage.getItem('locale')
+      const locale = localStorage.getItem('locale') || this.$i18n.locale
       if (locale !== this.locale) {
         this.locale = locale
         this.posts = require('./blogPosts.json')['posts'][locale]

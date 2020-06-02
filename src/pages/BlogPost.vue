@@ -38,6 +38,7 @@ export default {
   components: {Ctoa},
   data() {
     return {
+      locale: null,
       post: {
         title: null,
         content: null,
@@ -48,7 +49,7 @@ export default {
     const id = this.$route.params.id
     this.$ga.page(`/blog/${ id }`)
     this.localeInterval = setInterval(function () {
-      const locale = localStorage.getItem('locale')
+      const locale = localStorage.getItem('locale') || this.$i18n.locale
       if (locale !== this.locale) {
         this.locale = locale
         const posts = require('./blogPosts.json')['posts'][locale]
