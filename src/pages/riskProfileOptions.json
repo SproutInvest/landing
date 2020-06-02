@@ -127,34 +127,34 @@
   },
   "riskLanguageOptions": {
     "en":[
-      { "value": "own", "text": "Definitivamente tener un Negocio Propio" },
-      { "value": "maybeOwn", "text": "Tal vez tener un Negocio Propio" },
-      { "value": "neutral", "text": "No sé" },
-      { "value": "maybeWork", "text": "Tal Vez Trabajar para alguien más" },
-      { "value": "work", "text": "Definitivamente trabajar para alguien más" }
+      { "value": "own", "text": "Definitely have a Business of my Own" },
+      { "value": "maybe own", "text": "Maybe have a Business of my Own" },
+      { "value": "neutral", "text": "I don't know" },
+      { "value": "maybe work", "text": "Maybe working for someone else" },
+      { "value": "work", "text": "Definitely working for someone else" }
     ],
     "es":[
       { "value": "own", "text": "Definitivamente tener un Negocio Propio" },
-      { "value": "maybeOwn", "text": "Tal vez tener un Negocio Propio" },
+      { "value": "maybe own", "text": "Tal vez tener un Negocio Propio" },
       { "value": "neutral", "text": "No sé" },
-      { "value": "maybeWork", "text": "Tal Vez Trabajar para alguien más" },
+      { "value": "maybe work", "text": "Tal Vez Trabajar para alguien más" },
       { "value": "work", "text": "Definitivamente trabajar para alguien más" }
     ]
   },
   "lifestyleLanguageOptions": {
     "en":[
-      { "value": "less1month", "text": "Menos de 1 mes" },
-      { "value": "1to3month", "text": "Entre 1 mes y 3 meses" },
-      { "value": "3to6month", "text": "Entre 3 meses y 6 meses" },
-      { "value": "6to12month", "text": "Entre 6 meses y 1 año" },
-      { "value": "more12month", "text": "Más de 1 año" }
+      { "value": "less than 1 month", "text": "Menos de 1 mes" },
+      { "value": "1 to 3 months", "text": "Entre 1 mes y 3 meses" },
+      { "value": "3 to 6 months", "text": "Entre 3 meses y 6 meses" },
+      { "value": "6 to 12 months", "text": "Entre 6 meses y 1 año" },
+      { "value": "more than 12 months", "text": "Más de 1 año" }
     ],
     "es":[
-      { "value": "less1month", "text": "Menos de 1 mes" },
-      { "value": "1to3month", "text": "Entre 1 mes y 3 meses" },
-      { "value": "3to6month", "text": "Entre 3 meses y 6 meses" },
-      { "value": "6to12month", "text": "Entre 6 meses y 1 año" },
-      { "value": "more12month", "text": "Más de 1 año" }
+      { "value": "less than 1 month", "text": "Menos de 1 mes" },
+      { "value": "1 to 3 months", "text": "Entre 1 mes y 3 meses" },
+      { "value": "3 to 6 months", "text": "Entre 3 meses y 6 meses" },
+      { "value": "6 to 12 months", "text": "Entre 6 meses y 1 año" },
+      { "value": "more than 12 months", "text": "Más de 1 año" }
     ]
   },
   "purchaseLanguageOptions": {
@@ -173,13 +173,13 @@
     "en":[
       { "value": "rent", "text": "Rent" },
       { "value": "own", "text": "Own House" },
-      { "value": "ownMortgage", "text": "Own House with Mortgage" },
+      { "value": "own with a mortgage", "text": "Own House with Mortgage" },
       { "value": "other", "text": "Other" }
     ],
     "es":[
       { "value": "rent", "text": "Rento" },
       { "value": "own", "text": "Casa Propia" },
-      { "value": "ownMortgage", "text": "Casa Propia con Hipoteca" },
+      { "value": "own with a mortgage", "text": "Casa Propia con Hipoteca" },
       { "value": "other", "text": "Other" }
     ]
   },
@@ -195,19 +195,23 @@
       { "value": "other", "text": "Other" }
     ]
   },
-  "sourceOptionsLanguage": {
+  "sourceLanguageOptions": {
     "en":[
-      { "value": "yes", "text": "Yes" },
-      { "value": "no", "text": "No" },
+      { "value": "savings", "text": "Savings from my Income" },
+      { "value": "inheritance", "text": "From an Inheritance" },
+      { "value": "gift", "text": "From a Gift" },
+      { "value": "lottery", "text": "From a Lottery" },
+      { "value": "sold my house", "text": "I sold my house" },
+      { "value": "loan", "text": "I took a loan" },
       { "value": "other", "text": "Other" }
     ],
     "es":[
-      { "value": "yes", "text": "Del Ahorro de mis Ingresos" },
-      { "value": "no", "text": "De una Herencia" },
-      { "value": "no", "text": "De un Regalo" },
-      { "value": "no", "text": "De una Lotería" },
-      { "value": "no", "text": "Vendí mi Casa" },
-      { "value": "no", "text": "Tomé un Préstamo" },
+      { "value": "savings", "text": "Del Ahorro de mis Ingresos" },
+      { "value": "inheritance", "text": "De una Herencia" },
+      { "value": "gift", "text": "De un Regalo" },
+      { "value": "lottery", "text": "De una Lotería" },
+      { "value": "sold my house", "text": "Vendí mi Casa" },
+      { "value": "loan", "text": "Tomé un Préstamo" },
       { "value": "other", "text": "Other" }
     ]
   }

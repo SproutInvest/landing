@@ -75,7 +75,7 @@
   "es": {
     "who": "¿Por qué nosotros?",
     "profile": "Check your risk profile",
-    "learn": "Learn about investing",
+    "learn": "Aprende a invertir",
     "how": "¿Cómo Funciona?",
     "start": "Empieza a invertir",
     "contact": "Contacto"

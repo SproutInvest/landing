@@ -4,7 +4,7 @@
     <div class="ss-blog">
       <div class="container pt-5 pb-5">
         <h2 class="text-center mb-5">
-          Sprout Learning Center
+          {{ $t('blogTitle') }}
         </h2>
         <div class="ss-blog-post">
           <h4 class="mb-3">
@@ -16,6 +16,18 @@
     </div>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "blogTitle": "Sprout Learning Center"
+  },
+  "es": {
+    "blogTitle": "Blog de aprendizaje Sprout"
+  }
+}
+</i18n>
+
 
 <script>
 export default {

@@ -299,6 +299,7 @@
             :options="sourceOptions"
             class="mb-3"
             required
+            stacked
             disabled-field="notEnabled"
           />
         </b-form-group>
@@ -425,7 +426,7 @@ const lifestyleLanguageOptions= require('./riskProfileOptions.json')['lifestyleL
 const purchaseLanguageOptions= require('./riskProfileOptions.json')['purchaseLanguageOptions']
 const housingLanguageOptions= require('./riskProfileOptions.json')['housingLanguageOptions']
 const yesNoOtherLanguage= require('./riskProfileOptions.json')['yesNoOtherLanguage']
-const sourceOptionsLanguage= require('./riskProfileOptions.json')['sourceOptionsLanguage']
+const sourceLanguageOptions= require('./riskProfileOptions.json')['sourceLanguageOptions']
 export default {
   name: 'RiskProfile',
   components: {},
@@ -474,7 +475,7 @@ export default {
       purchaseOptions: purchaseLanguageOptions[this.locale],
       housingOptions: housingLanguageOptions[this.locale],
       yesNoOther: yesNoOtherLanguage[this.locale],
-      sourceOptions: sourceOptionsLanguage[this.locale],
+      sourceOptions: sourceLanguageOptions[this.locale],
       show: true,
     }
   },
@@ -493,6 +494,7 @@ export default {
     this.purchaseOptions = purchaseLanguageOptions[this.locale]
     this.housingOptions = housingLanguageOptions[this.locale]
     this.yesNoOther = yesNoOtherLanguage[this.locale]
+    this.sourceOptions = sourceLanguageOptions[this.locale]
   },
   methods: {
     onSubmit(evt) {
