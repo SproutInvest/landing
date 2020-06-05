@@ -4,7 +4,7 @@
     <div class="ss-blog">
       <div class="container pt-5 pb-5">
         <h2 class="text-center mb-5">
-          {{ $t('blogTitle') }}
+          <a href="#/blog"> {{ $t('blogTitle') }} </a>
         </h2>
         <div class="ss-blog-post">
           <h4 class="mb-3">
@@ -67,6 +67,10 @@ export default {
 .ss-blog
   background-color: $ss-bg-color
 h2
+  font-weight: 700
+  font-family: $ss-font-family-special
+  color: $ss-font-color-black
+a
   font-weight: 700
   font-family: $ss-font-family-special
   color: $ss-font-color-black
