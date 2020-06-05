@@ -114,9 +114,9 @@
   "lossLanguageOptions": {
     "en":[
       { "value": "sellAll", "text": "Sell Everything" },
-      { "value": "sellLoss", "text": "Vendo lo que más perdió" },
-      { "value": "hold", "text": "Mantengo mi Posición" },
-      { "value": "buy", "text": "Compro más" }
+      { "value": "sellLoss", "text": "I sell the investments that have lost the most" },
+      { "value": "hold", "text": "Hold my position" },
+      { "value": "buy", "text": "Buy more" }
     ],
     "es":[
       { "value": "sellAll", "text": "Vendo todo" },
@@ -143,11 +143,11 @@
   },
   "lifestyleLanguageOptions": {
     "en":[
-      { "value": "less than 1 month", "text": "Menos de 1 mes" },
-      { "value": "1 to 3 months", "text": "Entre 1 mes y 3 meses" },
-      { "value": "3 to 6 months", "text": "Entre 3 meses y 6 meses" },
-      { "value": "6 to 12 months", "text": "Entre 6 meses y 1 año" },
-      { "value": "more than 12 months", "text": "Más de 1 año" }
+      { "value": "less than 1 month", "text": "Less than 1 month" },
+      { "value": "1 to 3 months", "text": "Between 1 to 3 months" },
+      { "value": "3 to 6 months", "text": "Between 3 to 6 months" },
+      { "value": "6 to 12 months", "text": "Between 6 to 12 months" },
+      { "value": "more than 12 months", "text": "More than 1 year" }
     ],
     "es":[
       { "value": "less than 1 month", "text": "Menos de 1 mes" },
@@ -159,9 +159,9 @@
   },
   "purchaseLanguageOptions": {
     "en":[
-      { "value": "yes", "text": "Sí" },
+      { "value": "yes", "text": "Yes" },
       { "value": "no", "text": "No" },
-      { "value": "maybe", "text": "Tal vez" }
+      { "value": "maybe", "text": "Maybe" }
     ],
     "es":[
       { "value": "yes", "text": "Sí" },

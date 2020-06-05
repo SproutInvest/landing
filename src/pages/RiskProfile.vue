@@ -167,6 +167,65 @@
             stacked
           />
         </b-form-group>
+        <div>
+          <h3 class="mb-2">
+            {{ $t('agreeDisagreeSet1Label') }}
+          </h3>
+          <h4 class="mb-2">
+            {{ $t('agreeDisagreeSet1Description') }}
+          </h4>
+          <b-container class="agree-disagree-set-1 mb-5">
+            <b-row class="text-center">
+              <b-col cols="6" />
+              <b-col cols="1">
+                1
+              </b-col>
+              <b-col cols="1">
+                2
+              </b-col>
+              <b-col cols="1">
+                3
+              </b-col>
+              <b-col cols="1">
+                4
+              </b-col>
+              <b-col cols="1">
+                5
+              </b-col>
+              <b-col cols="1" />
+            </b-row>
+            <b-row class="text-center">
+              <b-col cols="6">
+                {{ $t('agreeDisagree11Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree11"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree11 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center">
+              <b-col cols="6">
+                {{ $t('agreeDisagree12Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree12"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree12 }}
+              </b-col>
+            </b-row>
+          </b-container>
+        </div>
         <b-form-group :label="$t('lifestyleLabel')">
           <b-form-radio-group
             v-model="form.lifestyle"
@@ -184,6 +243,185 @@
             disabled-field="notEnabled"
           />
         </b-form-group>
+        <div>
+          <h3 class="mb-2">
+            {{ $t('agreeDisagreeSet2Label') }}
+          </h3>
+          <h4 class="mb-2">
+            {{ $t('agreeDisagreeSet2Description') }}
+          </h4>
+          <b-container class="agree-disagree-set-2 mb-5">
+            <b-row class="text-center mb-2">
+              <b-col cols="6" />
+              <b-col cols="1">
+                1
+              </b-col>
+              <b-col cols="1">
+                2
+              </b-col>
+              <b-col cols="1">
+                3
+              </b-col>
+              <b-col cols="1">
+                4
+              </b-col>
+              <b-col cols="1">
+                5
+              </b-col>
+              <b-col cols="1" />
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree21Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree21"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree21 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree22Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree22"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree22 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree23Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree23"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree23 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree24Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree24"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree24 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree25Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree25"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree25 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree26Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree26"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree26 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree27Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree27"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree27 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree28Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree28"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree28 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree29Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree29"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree29 }}
+              </b-col>
+            </b-row>
+            <b-row class="text-center mb-2">
+              <b-col cols="6">
+                {{ $t('agreeDisagree210Label') }}
+              </b-col>
+              <b-col cols="5">
+                <b-form-rating
+                  v-model="form.agreeDisagree210"
+                  icon-empty="circle"
+                  icon-full="circle-fill"
+                />
+              </b-col>
+              <b-col cols="1">
+                {{ form.agreeDisagree210 }}
+              </b-col>
+            </b-row>
+          </b-container>
+        </div>
         <div>
           <h2 class="mb-2">
             {{ $t('headerPremium') }}
@@ -303,6 +541,44 @@
             disabled-field="notEnabled"
           />
         </b-form-group>
+        <b-form-group
+          :label="$t('dependentsLabel')"
+          :description="$t('dependentsDescription')"
+        >
+          <b-form-input
+            v-model="form.dependents"
+            required
+            placeholder="0"
+          />
+        </b-form-group>
+        <b-form-group
+          :label="$t('dependentsAgeLabel')"
+          :description="$t('dependentsAgeDescription')"
+        >
+          <b-form-input
+            v-model="form.dependentsAge"
+            required
+            placeholder="0"
+          />
+        </b-form-group>
+        <b-form-group :label="$t('insuranceLabel')">
+          <b-form-radio-group
+            v-model="form.insurance"
+            :options="yesNo"
+            class="mb-3"
+            required
+            disabled-field="notEnabled"
+          />
+        </b-form-group>
+        <b-form-group :label="$t('medicalLabel')">
+          <b-form-radio-group
+            v-model="form.medical"
+            :options="yesNo"
+            class="mb-3"
+            required
+            disabled-field="notEnabled"
+          />
+        </b-form-group>
         <b-button
           type="submit"
           variant="primary"
@@ -328,8 +604,8 @@
     "subHeader1": "Tell us a little about yourself and your needs as an investor. We understand that some questions may be sensitive, personal or private, however they are necessary for us to create an investment plan tailored to you.",
     "subHeader2": "All information is used by us to create your personlized plan and it is secure with us.",
     "headerPremium": "Premium Investors",
-    "subheaderPremium1": "La siguiente sección está dedicada a inversionistas que desean conocer su situación patrimonial de cualquier punto de vista. El patrimonio no solo se mide en recursos monetarios sino también en el potencial de generar estos recursos. Por ejemplo, con estos resultados podrías saber cuando es importante contratar un seguro de vida y por qué monto dependiendo en varios factores.",
-    "subheaderPremium2": "Actualmente estamos ofreciendo este servicio premium sin costo por ser clientes fundadores. si no estás interesado puedes proceder a enviar tu formulario.",
+    "subheaderPremium1": "The following section is dedicated to investors who want to know their overall financial status from any point of view. Wealth is measured not only in monetary terms but also in the potential to generate these resources. For example, with these results you might know when it's important to take out life insurance and how much it depends on several factors.",
+    "subheaderPremium2": "We are currently offering this premium service at no cost for being a founding customer. if you are not interested you can proceed to submit your form.",
     "fullName": "Full Name",
     "enterEmail": "Enter Email ID",
     "emailDescription": "We will not share your data with third parties",
@@ -348,8 +624,24 @@
     "lossLabel": "If your Investment portfolio lost 10% in a month, what would you do?",
     "ownBusinessLabel": "Do you currently have your own business or have you tried to start a business?",
     "riskLabel": "What do you perceive to be more risky, having your own business or working for someone else with a possibility of losing your job?",
+    "agreeDisagreeSet1Label": "How do you identify with the following statements on a scale of 1 to 5",
+    "agreeDisagreeSet1Description": "Select '1' if you 'completely disagree' and '5' if you completely agree",
+    "agreeDisagree11Label": "I prefer a secure income even if the potential Gain is lower",
+    "agreeDisagree12Label": "I can't lose Money even if I sacrifice some profit",
     "lifestyleLabel": "If you were to lose your source of income, how long could you maintain your lifestyle?",
     "purchaseLabel": "Do you plan to use your invested money to buy something? (Down payment for a House, Car, Vacation)?",
+    "agreeDisagreeSet2Label": "How do you identify with the following statements on a scale of 1 to 5",
+    "agreeDisagreeSet2Description": "Select '1' if you 'completely disagree' and '5' if you completely agree",
+    "agreeDisagree21Label": "I consider myself to be an introverted person",
+    "agreeDisagree22Label": "I'd rather stay home and read a book than party",
+    "agreeDisagree23Label": "I feel comfortable betting money",
+    "agreeDisagree24Label": "When I go shopping I like to analyze all the options before buying something",
+    "agreeDisagree25Label": "When I get money I didn't expect, I'll use it to buy myself something or go on vacation",
+    "agreeDisagree26Label": "If in a coin toss the result is the same 50 times, then I would be 100% sure that the next one would also be the same",
+    "agreeDisagree27Label": "I'd like to invest in Bitcoin if it starts to rise in value",
+    "agreeDisagree28Label": "I consider myself to be an anxious person",
+    "agreeDisagree29Label": "I'm a very disciplined person",
+    "agreeDisagree210Label": "I consider myself to be a creative person",
     "buttonPremium": "Continue with questionnaire for Premium Investors",
     "housingLabel": "What's your housing situation?",
     "mortgageLabel": "If you're currently paying off a mortgage, about how much do you need to pay? (*If you do not have to, then answer '0')",
@@ -364,7 +656,13 @@
     "debtLabel": "At the moment, do you have any debt other than a Mortgage? (e.g. car in lease or credit, credit card, etc.)",
     "debtPaymentLabel": "Could you give us a rough estimate of how much you need to pay off your debts?",
     "debtPaymentDescription": "Enter the approximate amount of your debt (e.g. 250000) if you don't have debts currently please enter 0",
-    "sourceLabel": "In case you have any savings or investments currently, how did you generate these investments?"
+    "sourceLabel": "In case you have any savings or investments currently, how did you generate these investments?",
+    "dependentsLabel": "How many dependents do you have?",
+    "dependentsDescription": "Children, Spouse, Family, or someone else who depends 100% on your income",
+    "dependentsAgeLabel": "How old is your youngest dependent?",
+    "dependentsAgeDescription": "If you don't have any dependents, enter 0.",
+    "insuranceLabel": "Do You Have Life Insurance?",
+    "medicalLabel": "Do you have a major medical expense insurance?"
   },
   "es": {
     "title": "Investor Profile",
@@ -391,8 +689,24 @@
     "lossLabel": "Si tu portafolio de Inversión perdiera 10% en un mes, que harías?",
     "ownBusinessLabel": "¿Actualmente tienes un Negocio Propio o has tratado de emprender un negocio?",
     "riskLabel": "¿Que percibes más riesgoso, tener un negocio propio o trabajar para alguien más y quedarte sin trabajo?",
+    "agreeDisagreeSet1Label": "¿Cómo te identificas con las siguientes afirmaciones en una escala de 1 a 5?",
+    "agreeDisagreeSet1Description": "Elige 1 si estas completamente en desacuerdo y 5 si estas completamente de acuerdo",
+    "agreeDisagree11Label": "'Prefiero un ingreso seguro aunque la Ganancia Potencial sea Menor'",
+    "agreeDisagree12Label": "'No puedo perder Dinero aunque sacrifique algo de ganancia'",
     "lifestyleLabel": "¿Si te quedaras sin tu fuente de ingresos, cuánto tiempo podrías mantener tu estilo de vida?",
     "purchaseLabel":"¿Tienes pensado usar tu dinero invertido para comprar algo? (Enganche de una Casa, Coche, un regalo, un viaje)?",
+    "agreeDisagreeSet2Label": "Que tanto te identificas con las siguientes afirmaciones en una escala de 1 a 5?",
+    "agreeDisagreeSet2Description": "Elige 1 si estas completamente en desacuerdo y 5 si estas completamente de acuerdo",
+    "agreeDisagree21Label": "Me considero como una persona Introvertida",
+    "agreeDisagree22Label": "Prefiero quedarme en casa a leer un Libro a salir de fiesta",
+    "agreeDisagree23Label": "Me siento cómodo apostando dinero",
+    "agreeDisagree24Label": "Cuando voy de compras me gusta analizar todas las opciones antes de comprar algo",
+    "agreeDisagree25Label": "Cuando recibo dinero que no esperaba lo uso para comprarme algo o irme de vacaciones",
+    "agreeDisagree26Label": "Si en un volado salen 50 veces el mismo resultado, es 100% seguro que el próximo será igual",
+    "agreeDisagree27Label": "Me gustaría invertir en Bitcoin si empieza a subir de valor",
+    "agreeDisagree28Label": "Me considero como una persona ansiosa",
+    "agreeDisagree29Label": "Soy una persona muy disciplinada",
+    "agreeDisagree210Label": "Me considero como una persona creativa",
     "buttonPremium": "¿Continuar con el cuestionario de Premium Investors?",
     "housingLabel": "¿Cual es tu situación habitacional??",
     "mortgageLabel": "¿Si actualmente estás pagando una hipoteca, aproximadamente cuanto te hace falta pagar? (*Si no tienes contesta '0')",
@@ -407,7 +721,13 @@
     "debtLabel": "¿Por el momento, Tienes alguna deuda que no sea una Hipoteca? (Ej. coche en arrendamiento o a crédito, tarjeta de crédito, etc)",
     "debtPaymentLabel": "¿Nos podrías dar un aproximado de cuanto te falta pagar de tus deudas?",
     "debtPaymentDescription": "Ingresa el monto aproximado de tu deuda (Ej. 250000) si no tienes deudas actualmente escribe 0",
-    "sourceLabel": "¿En caso de que tengas ahorros o inversiones actualmente, como generaste estos recursos?"
+    "sourceLabel": "¿En caso de que tengas ahorros o inversiones actualmente, como generaste estos recursos?",
+    "dependentsLabel": "¿Cuántos dependientes tienes?",
+    "dependentsDescription": "Hij@s, Pareja, familiar, o alguien más que dependa 100% de tus ingresos",
+    "dependentsAgeLabel": "¿Cuantos años tiene tu dependiente más joven ?",
+    "dependentsAgeDescription": "Si no tienes dependientes contesta 0.",
+    "insuranceLabel": "¿Cuentas con Seguro de Vida?",
+    "medicalLabel": "¿Cuentas con un Seguro de Gastos Médicos Mayores? *"
   }
 }
 </i18n>
@@ -448,8 +768,20 @@ export default {
         loss: '',
         ownBusiness: '',
         risk: '',
+        agreeDisagree11: '',
+        agreeDisagree12: '',
         lifestyle: '',
         purchase: '',
+        agreeDisagree21: '',
+        agreeDisagree22: '',
+        agreeDisagree23: '',
+        agreeDisagree24: '',
+        agreeDisagree25: '',
+        agreeDisagree26: '',
+        agreeDisagree27: '',
+        agreeDisagree28: '',
+        agreeDisagree29: '',
+        agreeDisagree210: '',
         housing: '',
         mortgage: '',
         mortgageDate: '',
@@ -461,6 +793,10 @@ export default {
         debt: '',
         debtPayment: '',
         source: '',
+        dependents: '',
+        dependentsAge: '',
+        insurance: '',
+        medical: '',
       },
       jobOptions: jobLanguageOptions[this.locale],
       educationOptions: educationLanguageOptions[this.locale],
@@ -527,8 +863,20 @@ export default {
       this.form.loss = '',
       this.form.ownBusiness = '',
       this.form.risk = '',
+      this.form.agreeDisagree11 = '',
+      this.form.agreeDisagree12 = '',
       this.form.lifestyle = '',
       this.form.purchase = '',
+      this.form.agreeDisagree21 = '',
+      this.form.agreeDisagree22 = '',
+      this.form.agreeDisagree23 = '',
+      this.form.agreeDisagree24 = '',
+      this.form.agreeDisagree25 = '',
+      this.form.agreeDisagree26 = '',
+      this.form.agreeDisagree27 = '',
+      this.form.agreeDisagree28 = '',
+      this.form.agreeDisagree29 = '',
+      this.form.agreeDisagree210 = '',
       this.form.housing = '',
       this.form.mortgage = '',
       this.form.mortgageDate = '',
@@ -540,6 +888,10 @@ export default {
       this.form.debt = '',
       this.form.debtPayment = '',
       this.form.source = '',
+      this.form.dependents = '',
+      this.form.dependentsAge = '',
+      this.form.insurance = '',
+      this.form.medical = '',
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
@@ -563,6 +915,9 @@ h2
   font-size: 1.2rem
 h3
   font-size: 1rem
+h4
+  font-size: 0.8rem
+  font-weight: normal
 .ss-select
   width: 75%
 .ss-text
