@@ -752,7 +752,7 @@ export default {
   components: {},
   data: function() {
     return {
-      locale: 'en',
+      locale: null,
       form: {
         email: '',
         name: '',
@@ -798,27 +798,27 @@ export default {
         insurance: '',
         medical: '',
       },
-      jobOptions: jobLanguageOptions[this.locale],
-      educationOptions: educationLanguageOptions[this.locale],
-      yesNo: yesNoLanguage[this.locale],
-      objectiveOptions: objectiveLanguageOptions[this.locale],
-      horizonOptions: horizonLanguageOptions[this.locale],
-      returnOptions: returnLanguageOptions[this.locale],
-      riskReturnOptions: riskReturnLanguageOptions[this.locale],
-      lossOptions:lossLanguageOptions[this.locale],
-      riskOptions: riskLanguageOptions[this.locale],
-      lifestyleOptions: lifestyleLanguageOptions[this.locale],
-      purchaseOptions: purchaseLanguageOptions[this.locale],
-      housingOptions: housingLanguageOptions[this.locale],
-      yesNoOther: yesNoOtherLanguage[this.locale],
-      sourceOptions: sourceLanguageOptions[this.locale],
+      jobOptions: [],
+      educationOptions: [],
+      yesNo: [],
+      objectiveOptions: [],
+      horizonOptions: [],
+      returnOptions: [],
+      riskReturnOptions: [],
+      lossOptions: [],
+      riskOptions: [],
+      lifestyleOptions: [],
+      purchaseOptions: [],
+      housingOptions: [],
+      yesNoOther: [],
+      sourceOptions: [],
       show: true,
     }
   },
   mounted () {
     this.$ga.page('/risk_profile')
     this.localeInterval = setInterval(function () {
-      const locale = localStorage.getItem('locale')
+      const locale = localStorage.getItem('locale') || this.$i18n.locale
       if (locale !== this.locale) {
         this.locale = locale
         this.jobOptions = jobLanguageOptions[locale]
