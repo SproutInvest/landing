@@ -847,6 +847,9 @@ export default {
         this.sourceOptions = sourceLanguageOptions[locale]
       }
     }.bind(this), 1000)
+    this.uploadData({
+      test: 'test',
+    })
   },
   beforeDestroy() {
     clearInterval(this.localeInterval)
