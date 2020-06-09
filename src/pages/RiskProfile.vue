@@ -737,11 +737,13 @@ import { v4 as uuidv4 } from 'uuid'
 
 const AWS = require('aws-sdk')
 AWS.config.update({
-  region: 'us-east-2',
   accessKeyId: 'AKIAWSZFYTWD6UGRNGHU',
   secretAccessKey: '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',
 })
-const s3 = new AWS.S3({apiVersion: '2006-03-01'})
+const bucket = new AWS.S3({
+  apiVersion: '2006-03-01',
+  params: {Bucket: 'risk-profiles'},
+})
 
 const jobLanguageOptions= require('./riskProfileOptions.json')['jobLanguageOptions']
 const educationLanguageOptions= require('./riskProfileOptions.json')['educationLanguageOptions']
@@ -847,9 +849,6 @@ export default {
         this.sourceOptions = sourceLanguageOptions[locale]
       }
     }.bind(this), 1000)
-    this.uploadData({
-      test: 'test',
-    })
   },
   beforeDestroy() {
     clearInterval(this.localeInterval)
@@ -857,8 +856,7 @@ export default {
   methods: {
     uploadData(data) {
       const fileName = `${ uuidv4() }.json`
-      s3.putObject({
-        Bucket: 'risk-profile',
+      bucket.upload({
         Key: fileName,
         Body: JSON.stringify(data),
       }, function (err, data) {
