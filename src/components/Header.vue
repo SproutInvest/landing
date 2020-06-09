@@ -34,17 +34,17 @@
             >
               {{ $t('who') }}
             </b-nav-item> -->
-            <!-- <b-nav-item
-              href="#/risk_profile"
-              class="ss-header-link"
-            >
-              {{ $t('profile') }}
-            </b-nav-item> -->
             <b-nav-item
               href="#/blog"
               class="ss-header-link"
             >
               {{ $t('learn') }}
+            </b-nav-item>
+            <b-nav-item
+              href="#/risk_profile"
+              class="ss-header-link"
+            >
+              {{ $t('profile') }}
             </b-nav-item>
             <!-- <b-nav-item
               href="#about"
@@ -73,7 +73,7 @@
   "en": {
     "home": "Home",
     "who": "Who are we?",
-    "profile": "Check your risk profile",
+    "profile": "Investor profile",
     "learn": "Learn about investing",
     "how": "How does it work?",
     "start": "Start investing",
@@ -82,7 +82,7 @@
   "es": {
     "home": "Home",
     "who": "¿Por qué nosotros?",
-    "profile": "Check your Investor Profile",
+    "profile": "Perfil de Inversionista",
     "learn": "Aprende a invertir",
     "how": "¿Cómo Funciona?",
     "start": "Empieza a invertir",
