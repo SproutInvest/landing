@@ -438,147 +438,150 @@
             type="button"
             variant="info"
             class="mr-2 mb-4"
+            @click="togglePremium"
           >
             {{ $t('buttonPremium') }}
           </b-button>
         </div>
-        <b-form-group :label="$t('housingLabel')">
-          <b-form-radio-group
-            v-model="form.housing"
-            :options="housingOptions"
-            class="mb-3"
-            required
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('mortgageLabel')">
-          <b-form-input
-            v-model="form.mortgage"
-            required
-            placeholder="50000"
-          />
-        </b-form-group>
-        <b-form-group
-          class="ss-text"
-          :label="$t('mortgageDateLabel')"
-        >
-          <b-form-datepicker
-            v-model="form.mortgageDate"
-            show-decade-nav
-            class="mb-2"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('mortgageYearsLabel')">
-          <b-form-input
-            v-model="form.mortgageYears"
-            required
-            placeholder="10"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('investmentLabel')">
-          <b-form-radio-group
-            v-model="form.investment"
-            :options="yesNoOther"
-            class="mb-3"
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group
-          :label="$t('investmentAmountLabel')"
-          :description="$t('investmentAmountDescription')"
-        >
-          <b-form-input
-            v-model="form.investmentAmount"
-            required
-            placeholder="25000"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('companySharesLabel')">
-          <b-form-radio-group
-            v-model="form.companyShares"
-            :options="yesNoOther"
-            class="mb-3"
-            required
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group
-          :label="$t('incomeLabel')"
-          :description="$t('incomeDescription')"
-        >
-          <b-form-input
-            v-model="form.income"
-            required
-            placeholder="25000"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('debtLabel')">
-          <b-form-radio-group
-            v-model="form.debt"
-            :options="yesNo"
-            class="mb-3"
-            required
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group
-          :label="$t('debtPaymentLabel')"
-          :description="$t('debtPaymentDescription')"
-        >
-          <b-form-input
-            v-model="form.debtPayment"
-            required
-            placeholder="0"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('sourceLabel')">
-          <b-form-radio-group
-            v-model="form.source"
-            :options="sourceOptions"
-            class="mb-3"
-            required
-            stacked
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group
-          :label="$t('dependentsLabel')"
-          :description="$t('dependentsDescription')"
-        >
-          <b-form-input
-            v-model="form.dependents"
-            required
-            placeholder="0"
-          />
-        </b-form-group>
-        <b-form-group
-          :label="$t('dependentsAgeLabel')"
-          :description="$t('dependentsAgeDescription')"
-        >
-          <b-form-input
-            v-model="form.dependentsAge"
-            required
-            placeholder="0"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('insuranceLabel')">
-          <b-form-radio-group
-            v-model="form.insurance"
-            :options="yesNo"
-            class="mb-3"
-            required
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
-        <b-form-group :label="$t('medicalLabel')">
-          <b-form-radio-group
-            v-model="form.medical"
-            :options="yesNo"
-            class="mb-3"
-            required
-            disabled-field="notEnabled"
-          />
-        </b-form-group>
+        <div v-show="showPremium">
+          <b-form-group :label="$t('housingLabel')">
+            <b-form-radio-group
+              v-model="form.housing"
+              :options="housingOptions"
+              class="mb-3"
+              required
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('mortgageLabel')">
+            <b-form-input
+              v-model="form.mortgage"
+              required
+              placeholder="50000"
+            />
+          </b-form-group>
+          <b-form-group
+            class="ss-text"
+            :label="$t('mortgageDateLabel')"
+          >
+            <b-form-datepicker
+              v-model="form.mortgageDate"
+              show-decade-nav
+              class="mb-2"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('mortgageYearsLabel')">
+            <b-form-input
+              v-model="form.mortgageYears"
+              required
+              placeholder="10"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('investmentLabel')">
+            <b-form-radio-group
+              v-model="form.investment"
+              :options="yesNoOther"
+              class="mb-3"
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group
+            :label="$t('investmentAmountLabel')"
+            :description="$t('investmentAmountDescription')"
+          >
+            <b-form-input
+              v-model="form.investmentAmount"
+              required
+              placeholder="25000"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('companySharesLabel')">
+            <b-form-radio-group
+              v-model="form.companyShares"
+              :options="yesNoOther"
+              class="mb-3"
+              required
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group
+            :label="$t('incomeLabel')"
+            :description="$t('incomeDescription')"
+          >
+            <b-form-input
+              v-model="form.income"
+              required
+              placeholder="25000"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('debtLabel')">
+            <b-form-radio-group
+              v-model="form.debt"
+              :options="yesNo"
+              class="mb-3"
+              required
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group
+            :label="$t('debtPaymentLabel')"
+            :description="$t('debtPaymentDescription')"
+          >
+            <b-form-input
+              v-model="form.debtPayment"
+              required
+              placeholder="0"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('sourceLabel')">
+            <b-form-radio-group
+              v-model="form.source"
+              :options="sourceOptions"
+              class="mb-3"
+              required
+              stacked
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group
+            :label="$t('dependentsLabel')"
+            :description="$t('dependentsDescription')"
+          >
+            <b-form-input
+              v-model="form.dependents"
+              required
+              placeholder="0"
+            />
+          </b-form-group>
+          <b-form-group
+            :label="$t('dependentsAgeLabel')"
+            :description="$t('dependentsAgeDescription')"
+          >
+            <b-form-input
+              v-model="form.dependentsAge"
+              required
+              placeholder="0"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('insuranceLabel')">
+            <b-form-radio-group
+              v-model="form.insurance"
+              :options="yesNo"
+              class="mb-3"
+              required
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+          <b-form-group :label="$t('medicalLabel')">
+            <b-form-radio-group
+              v-model="form.medical"
+              :options="yesNo"
+              class="mb-3"
+              required
+              disabled-field="notEnabled"
+            />
+          </b-form-group>
+        </div>
         <b-button
           type="submit"
           variant="primary"
@@ -765,6 +768,7 @@ export default {
   data: function() {
     return {
       locale: null,
+      showPremium: false,
       form: {
         email: '',
         name: '',
@@ -871,6 +875,9 @@ export default {
     onSubmit(evt) {
       evt.preventDefault()
       this.uploadData(this.form)
+    },
+    togglePremium() {
+      this.showPremium = !this.showPremium
     },
     onReset(evt) {
       evt.preventDefault()
