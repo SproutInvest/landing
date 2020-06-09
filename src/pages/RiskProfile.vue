@@ -733,6 +733,16 @@
 </i18n>
 
 <script>
+import { v4 as uuidv4 } from 'uuid'
+
+const AWS = require('aws-sdk')
+AWS.config.update({
+  region: 'us-east-2',
+  accessKeyId: 'AKIAWSZFYTWD6UGRNGHU',
+  secretAccessKey: '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',
+})
+const s3 = new AWS.S3({apiVersion: '2006-03-01'})
+
 const jobLanguageOptions= require('./riskProfileOptions.json')['jobLanguageOptions']
 const educationLanguageOptions= require('./riskProfileOptions.json')['educationLanguageOptions']
 const yesNoLanguage= require('./riskProfileOptions.json')['yesNoLanguage']
@@ -842,9 +852,24 @@ export default {
     clearInterval(this.localeInterval)
   },
   methods: {
+    uploadData(data) {
+      const fileName = `${ uuidv4() }.json`
+      s3.putObject({
+        Bucket: 'risk-profile',
+        Key: fileName,
+        Body: JSON.stringify(data),
+      }, function (err, data) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log('Upload successful')
+          console.log(data, fileName)
+        }
+      })
+    },
     onSubmit(evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      this.uploadData(this.form)
     },
     onReset(evt) {
       evt.preventDefault()
