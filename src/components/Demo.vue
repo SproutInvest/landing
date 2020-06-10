@@ -83,7 +83,7 @@
     "deposit": "Monto de Depósito Mensual",
     "term": "Plazo de Inversión",
     "years": "años",
-    "disclaimer": "*Tasa de interés de la cuenta de ahorro del 1%",
+    "disclaimer": "*Tasa de interés de la cuenta de ahorro de banco del 1%",
     "chartTitle": "Visualiza el potencial de tu inversión"
   }
 }
