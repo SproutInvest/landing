@@ -36,14 +36,27 @@
           <b-form-group
             id="input-group-2"
             class="ss-text"
-            :label="$t('enterName')"
+            :label="$t('enterFirstName')"
             label-for="input-2"
           >
             <b-form-input
               id="input-2"
-              v-model="form.name"
+              v-model="form.firstName"
               required
-              placeholder="Full name"
+              :placeholder="$t('firstNameHolder')"
+            />
+          </b-form-group>
+          <b-form-group
+            id="input-group-2"
+            class="ss-text"
+            :label="$t('enterLastName')"
+            label-for="input-2"
+          >
+            <b-form-input
+              id="input-2"
+              v-model="form.lastName"
+              required
+              :placeholder="$t('lastNameHolder')"
             />
           </b-form-group>
           <b-form-group
@@ -622,7 +635,10 @@
     "fullName": "Full Name",
     "enterEmail": "Enter Email ID *",
     "emailDescription": "We will not share your data with third parties",
-    "enterName": "Full Name: *",
+    "enterFirstName": "First Name: *",
+    "firstNameHolder": "First Name",
+    "enterLastName": "Last Name: *",
+    "lastNameHolder": "Last Name",
     "enterDob": "Date of Birth:",
     "jobLabel": "What do you do for a living?",
     "educationLabel": "What is the highest level of education completed by you?",
@@ -688,7 +704,10 @@
     "fullName": "Full Name",
     "enterEmail": "Email ID *",
     "emailDescription": "No compartiremos sus datos con terceros",
-    "enterName": "Nombre (s): *",
+    "enterFirstName": "Nombre (s): *",
+    "firstNameHolder": "Nombre",
+    "enterLastName": "Apellidos: *",
+    "lastNameHolder": "Apellidos",
     "enterDob": "Fecha de Nacimiento:",
     "jobLabel": "¿A qué te dedicas?",
     "educationLabel": "¿Cuál es tu último grado de Estudios?",
@@ -783,7 +802,8 @@ export default {
       showPremium: false,
       form: {
         email: '',
-        name: '',
+        firstName: '',
+        lastName: '',
         dob: '',
         job: null,
         education: null,
@@ -898,7 +918,8 @@ export default {
       evt.preventDefault()
       // Reset our form values
       this.form.email = ''
-      this.form.name = ''
+      this.form.firstName = ''
+      this.form.lastName = ''
       this.form.dob = ''
       this.form.job = null
       this.form.education = null
