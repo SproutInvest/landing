@@ -118,12 +118,15 @@ export default {
       if (!this.email) {
         return
       }
-      const locale = localStorage.getItem('locale')
-      const url = 'https://hna2ztnutb.execute-api.us-east-2.amazonaws.com/default'
+      const locale = localStorage.getItem('locale') || this.$i18n.locale
+      const url = 'https://sproutinvest-api.herokuapp.com/subscribe/'
       this.submitting = true
       axios
         .post(url, {
-          email: `${ this.email } - ${ this.name } - ${ this.plan } - ${ locale }`,
+          email: this.email,
+          name: this.name,
+          plan: this.plan,
+          locale: locale.toUpperCase(),
         })
         .then(() => {
           this.submitting = false

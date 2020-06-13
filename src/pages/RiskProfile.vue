@@ -767,17 +767,7 @@
 </i18n>
 
 <script>
-import { v4 as uuidv4 } from 'uuid'
-
-const AWS = require('aws-sdk')
-AWS.config.update({
-  accessKeyId: 'AKIAWSZFYTWD6UGRNGHU',
-  secretAccessKey: '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',
-})
-const bucket = new AWS.S3({
-  apiVersion: '2006-03-01',
-  params: {Bucket: 'risk-profiles'},
-})
+import axios from 'axios'
 
 const jobLanguageOptions= require('./riskProfileOptions.json')['jobLanguageOptions']
 const educationLanguageOptions= require('./riskProfileOptions.json')['educationLanguageOptions']
@@ -892,18 +882,16 @@ export default {
   },
   methods: {
     uploadData(data) {
-      const fileName = `${ uuidv4() }.json`
-      bucket.upload({
-        Key: fileName,
-        Body: JSON.stringify(data),
-      }, function (err, data) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log('Upload successful')
-          console.log(data, fileName)
-        }
-      })
+      const locale = localStorage.getItem('locale') || this.$i18n.locale
+      const url = 'https://sproutinvest-api.herokuapp.com/risk_profile/'
+      axios
+        .post(url, {
+          email: data.email,
+          first_name: data.firstName,
+          last_name: data.lastName,
+          locale: locale.toUpperCase(),
+          risk_profile: JSON.stringify(data),
+        })
     },
     onSubmit(evt) {
       evt.preventDefault()
