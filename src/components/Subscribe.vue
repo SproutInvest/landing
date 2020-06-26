@@ -88,7 +88,7 @@
     "subscribe": "Suscribir",
     "great": "¡Excelente! Tendrás noticias de Sprout muy pronto",
     "choice": "Producto:",
-    "disclaimer": "* no compartiremos sus datos con terceros"
+    "disclaimer": "* no compartiremos tus datos con terceros"
   }
 }
 </i18n>
