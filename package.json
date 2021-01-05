@@ -17,7 +17,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "apexcharts": "^3.17.1",
     "aws-sdk": "^2.692.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "chart.js": "^2.9.3",
